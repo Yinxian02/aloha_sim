@@ -1,0 +1,26 @@
+{
+  "id": "upload_6ef0bb25",
+  "call": "upload_objects",
+  "mode": "mock",
+  "sent_at": "2026-11-13T21:18:36.847Z",
+  "objects_revision": "ad3b41019ad4e8b6139627e7160c2e90a905f5d7208c804684cb7c5991c4cdc3",
+  "bucket": "s3://projectsim-mock",
+  "files": [
+    {
+      "object_id": "mug_01",
+      "path": "aloha_sim/assets/ycb/025_mug/google_64k/model.xml",
+      "type": "mjcf",
+      "bytes": 10945,
+      "sha256": "4151ed88b8447a06d5d33a5f85b0eb1bc2788a57054ba8d222b17ad9de7abce9",
+      "key": "objects/mug_01/4151ed88b844-model.xml",
+      "sent": false
+    }
+  ],
+  "sent_bytes": 0,
+  "stored": {
+    "objects/mug_01/4151ed88b844-model.xml": "4151ed88b8447a06d5d33a5f85b0eb1bc2788a57054ba8d222b17ad9de7abce9"
+  },
+  "generate": [
+    "trash_bin_01"
+  ]
+}

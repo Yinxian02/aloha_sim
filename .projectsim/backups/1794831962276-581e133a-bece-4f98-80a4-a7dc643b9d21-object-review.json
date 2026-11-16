@@ -1,0 +1,20 @@
+{
+  "objects": {
+    "mug_01": "80019d15c7de2dbc8f844df85d6838cafa7d70c99943184457ca4d2297f530f1",
+    "trash_bin_01": "e7bfa34de2150e65eadfd6bd849b8084f26e7cca12876fb5d96aae0dd47f4acb",
+    "bottle_01": "1c84ec4febf84929254abe154ee4f87af401b8bfe8483b897ab2ba3a2f4555f3",
+    "bottle_02": "a97fb034fc8f5165e302d62cd1aa7b58372dc4c499c1e04d087876982a2b45ca",
+    "bottle_03": "83ef30798f5dcd6e6aa472bdbad32027ad5dbb4a37cc22c33fcefd9214f6402c",
+    "bottle_04": "a1f5d79a7b4451089995baf75f742728ae518b1c2deae885c4457a43e071bbab"
+  },
+  "approved_at": "2026-11-13T21:25:47.026Z",
+  "scope": "object_details_only",
+  "unresolved": [
+    "mug_01",
+    "trash_bin_01",
+    "bottle_01",
+    "bottle_02",
+    "bottle_03",
+    "bottle_04"
+  ]
+}

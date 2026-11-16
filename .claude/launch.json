@@ -1,0 +1,18 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "projectsim-app",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/sofialiang/Documents/GitHub/projectsim-task-component/prototype/intake-web && PROJECTSIM_REPO=/Users/sofialiang/Documents/GitHub/aloha_sim PROJECTSIM_MOCK=1 PORT=5174 node server/start.mjs --dev"],
+      "port": 5174
+    },
+    {
+      "name": "projectsim-app-newtask",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/sofialiang/Documents/GitHub/projectsim-task-component/prototype/intake-web && PROJECTSIM_REPO=/Users/sofialiang/Documents/GitHub/aloha_sim-newtask PROJECTSIM_MOCK=1 PORT=5175 node server/start.mjs --dev"],
+      "port": 5175,
+      "autoPort": false
+    }
+  ]
+}

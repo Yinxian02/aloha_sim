@@ -1,0 +1,12 @@
+{
+  "id": "brief_437e6591",
+  "call": "submit_brief",
+  "mode": "mock",
+  "sent_at": "2026-11-13T21:24:37.187Z",
+  "path": "projectsim/tasks/bottle_into_trash_can/brief.yaml",
+  "revision": "dce166d9e6e31cd03897b7b8a0d0ec01289858485d445c216a38b30f19c8556f",
+  "sent": {
+    "path": "projectsim/tasks/bottle_into_trash_can/brief.yaml",
+    "bytes": 2714
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "objects": {
+    "mug_01": "80019d15c7de2dbc8f844df85d6838cafa7d70c99943184457ca4d2297f530f1",
+    "trash_bin_01": "e7bfa34de2150e65eadfd6bd849b8084f26e7cca12876fb5d96aae0dd47f4acb"
+  },
+  "approved_at": "2026-11-13T20:37:38.268Z",
+  "scope": "object_details_only",
+  "unresolved": [
+    "mug_01",
+    "trash_bin_01"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "brief_9f78faf2",
+  "call": "submit_brief",
+  "mode": "mock",
+  "sent_at": "2026-11-13T21:16:40.651Z",
+  "path": "projectsim/tasks/mug_into_trash_bin/brief.yaml",
+  "revision": "e62f0605fb5441c741f1393865638d7299ab350eb60aed5f5569e60f388e8f3f",
+  "sent": {
+    "path": "projectsim/tasks/mug_into_trash_bin/brief.yaml",
+    "bytes": 1668
+  }
+}
