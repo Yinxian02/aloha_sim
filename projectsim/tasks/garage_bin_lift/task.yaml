@@ -44,7 +44,7 @@ task:
     - {axis: "robot_start", says: "where the arm starts", normal: "base calibration error up to 3 mm and 0.5 deg", src: "retrieved"}
   exclusions: []  # not simulated in this version
   ambiguities:  # open questions, each routed to who answers it
-    - {id: "A1", term: "lifted", why: "needs numbers: height (cm)", goes_to: "stage_3", defaults_seen: ["Arena LiftObjectTask: 0.3 m above the start, tolerance 0.05 m"], status: "open"}
+    - {id: "A1", term: "lifted", why: "needs numbers: height (cm)", goes_to: "stage_3", links: "brief.acceptance.tolerances.height_cm", status: "resolved", answer: "brief.acceptance.tolerances.height_cm = 10", defaults_seen: ["Arena LiftObjectTask: 0.3 m above the start, tolerance 0.05 m"]}
     - {id: "A2", term: "The run uses a generic 6-DOF arm. Should this scene be run with ALOHA 2 instead, and where is it mounted on the bench?", why: "listed as unknown in the brief (brief.unknowns[0])", goes_to: "stage_1", links: "brief.robot.model", status: "open"}
     - {id: "A3", term: "Some generated masses look off for real objects (soccer ball 0.07 kg, workbench classed as plastic). Which objects' physics matter for your evals?", why: "listed as unknown in the brief (brief.unknowns[1])", goes_to: "stage_1", links: "brief.assets", status: "open"}
   check:  # automatic checks on this block
