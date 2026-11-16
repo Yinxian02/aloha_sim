@@ -1,0 +1,42 @@
+{
+  "id": "dishes_on_rack",
+  "instruction": "put the plate and the bowl on the rack",
+  "robot": "ALOHA",
+  "object_ids": ["plate_01", "bowl_01", "dish_rack_01"],
+  "destination": "dish_rack_01",
+  "time_limit_s": 120,
+  "order": "any",
+  "task_name": "dishes_on_rack",
+  "instruction_variants": {
+    "vague": "tidy the dishes away",
+    "specific": "pick up the plate and the bowl from the table and set each one in the dish rack so it rests on the rack"
+  },
+  "success_conditions": [
+    "The plate and the bowl are both on the rack at the same time: each touches the rack and sits at least 2 cm above the rack's base (same rule as aloha_sim BowlOnRack).",
+    "The robot has released both dishes.",
+    "The plate, the bowl and the rack are at rest (not moving).",
+    "Dishes may be placed in any order."
+  ],
+  "success": {
+    "when": "end",
+    "conditions": [
+      { "fact": "on(plate_01, dish_rack_01)", "says": "the plate is on the rack", "src": "retrieved", "from": "aloha_sim/tasks/bowl_on_rack.py get_reward (contact + 2 cm above rack)" },
+      { "fact": "on(bowl_01, dish_rack_01)", "says": "the bowl is on the rack", "src": "retrieved", "from": "aloha_sim/tasks/bowl_on_rack.py get_reward (contact + 2 cm above rack)" },
+      { "fact": "released(plate_01)", "says": "the plate is released", "src": "estimated", "from": "stage 1" },
+      { "fact": "released(bowl_01)", "says": "the bowl is released", "src": "estimated", "from": "stage 1" },
+      { "fact": "stable(plate_01)", "says": "the plate stays still", "src": "retrieved", "from": "success_detector_utils.any_props_moving" },
+      { "fact": "stable(bowl_01)", "says": "the bowl stays still", "src": "retrieved", "from": "success_detector_utils.any_props_moving" },
+      { "fact": "stable(dish_rack_01)", "says": "the rack stays still", "src": "retrieved", "from": "success_detector_utils.any_props_moving" }
+    ]
+  },
+  "failure": [
+    "The plate or the bowl falls off the table."
+  ],
+  "initial_state": [
+    { "fact": "gripper_empty()", "says": "the gripper is empty", "src": "estimated", "from": "stage 1" },
+    { "fact": "released(plate_01)", "says": "the plate starts resting on the table, not held", "src": "retrieved", "from": "aloha_sim/tasks/base/dish_on_rack.py dish_uniform_position" },
+    { "fact": "released(bowl_01)", "says": "the bowl starts resting on the table, not held", "src": "estimated", "from": "stage 1" },
+    { "fact": "not on(plate_01, dish_rack_01)", "says": "the plate starts off the rack", "src": "estimated", "from": "stage 1" },
+    { "fact": "not on(bowl_01, dish_rack_01)", "says": "the bowl starts off the rack", "src": "estimated", "from": "stage 1" }
+  ]
+}

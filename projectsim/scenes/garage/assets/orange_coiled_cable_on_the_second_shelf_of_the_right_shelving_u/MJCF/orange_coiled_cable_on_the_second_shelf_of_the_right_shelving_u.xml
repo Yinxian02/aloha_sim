@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="orange_coiled_cable_on_the_second_shelf_of_the_right_shelving_u">
+  <compiler angle="radian" coordinate="local" inertiafromgeom="auto" />
+  <option integrator="implicitfast" timestep="0.001" />
+  <custom />
+  <asset>
+    <mesh file="visuals\orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3" scale="1.0 1.0 1.0" />
+    <material name="Material_0_111" texture="Material_0_111" />
+    <texture builtin="none" file="visuals\textures\orange_coiled_cable_on_the_second_shelf_of_the_right_shelving_u_basecolor_image0111.png" gridsize="1 1" mark="none" markrgb="0.0 0.0 0.0" name="Material_0_111" rgb1="0.8 0.8 0.8" rgb2="0.5 0.5 0.5" type="2d" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3001.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3001_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3002.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3002_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3003.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3003_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3004.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3004_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3005.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3005_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3006.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3006_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3007.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3007_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3008.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3008_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3009.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3009_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3010.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3010_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3011.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3011_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3012.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3012_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3013.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3013_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3014.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3014_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3015.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3015_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3016.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3016_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3017.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3017_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3018.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3018_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3019.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3019_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3020.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3020_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3021.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3021_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3022.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3022_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3023.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3023_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3024.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3024_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3025.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3025_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3026.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3026_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3027.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3027_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3028.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3028_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3029.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3029_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3030.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3030_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3031.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3031_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3032.obj" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3032_mesh" />
+  </asset>
+  <worldbody>
+    <light cutoff="100" diffuse="1 1 1" dir="0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular="0.1 0.1 0.1" />
+    <body name="orange_coiled_cable_on_the_second_shelf_of_the_right_shelving_u" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+      <inertial pos="0.0148759997 0.00890399981 0.0242539998" quat="0.949584294 -0.0136014613 -0.00652227776 -0.313148733" diaginertia="0.00121770462 0.00141259516 0.00252360594" mass="0.319999993" />
+      <geom class="visual" material="Material_0_111" mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3" name="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3" pos="0.0 0.0 0.0" type="mesh" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3001_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3002_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3003_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3004_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3005_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3006_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3007_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3008_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3009_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3010_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3011_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3012_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3013_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3014_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3015_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3016_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3017_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3018_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3019_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3020_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3021_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3022_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3023_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3024_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3025_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3026_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3027_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3028_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3029_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3030_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3031_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_second_shelf_of_the_right_sh_7804aa3032_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+    </body>
+  </worldbody>
+  <actuator />
+  <default>
+    <default class="visual">
+      <geom conaffinity="0" contype="0" group="1" type="mesh" />
+    </default>
+    <default class="collision">
+      <geom group="0" friction="0.28 0.005 0.0001" priority="1" solref="0.004 1" />
+    </default>
+  </default>
+</mujoco>

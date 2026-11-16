@@ -1,0 +1,89 @@
+# brief.yaml v1, drafted by the projectsim task-generation skill for the Google DeepMind demo (16 Nov 2026).
+# Extends aloha_sim's own BowlOnRack eval into a family with new dish instances and physics variation.
+# Field reference: docs/brief.md.
+
+id: BR-DISHES-ON-RACK
+version: 1
+entry: task
+
+task:
+  sentence: { value: "put the plate and the bowl on the rack", src: estimated }   # extends BowlOnRack's "put the bowl on the rack"
+goal:
+  value: "Evaluate a Gemini Robotics policy on putting dishes in a rack across new dish instances and plausible physics, in aloha_sim"
+  src: estimated
+  decision: { value: null, src: unknown }
+intended_use: { value: evaluation, src: supplied }   # DM calls 12 Aug + 3 Nov: sim is used to support evaluation
+task_families:
+  value:
+    - { name: dishes_on_rack, examples: ["put the bowl on the rack"] }   # aloha_sim BowlOnRack.get_instruction
+  src: retrieved
+
+robot:
+  model: { value: ALOHA 2, src: retrieved }
+simulator:
+  engine: { value: mujoco, src: supplied }
+policy:
+  checkpoint: { value: "Gemini Robotics model served via gemini-robotics-sdk (Trusted Testers)", src: retrieved }   # README Inference section
+  reads_instruction: { value: true, src: retrieved }
+
+assets:
+  plate_01:
+    label: { value: plate, src: retrieved }
+    files: { value: ["aloha_sim/assets/ycb/029_plate/google_64k/model.xml"], src: retrieved }
+    category: { value: plate, src: retrieved }
+    count: { value: 1, src: estimated }
+    held_back: { value: 1, src: estimated }
+  bowl_01:
+    label: { value: bowl, src: retrieved }
+    files: { value: ["aloha_sim/assets/ycb/024_bowl/google_64k/model.xml"], src: retrieved }
+    category: { value: bowl, src: retrieved }
+    count: { value: 1, src: estimated }
+    held_back: { value: 1, src: estimated }
+  dish_rack_01:
+    label: { value: dish rack, src: retrieved }
+    files: { value: ["aloha_sim/assets/gso/Rubbermaid_Large_Drainer/model.xml"], src: retrieved }
+    category: { value: dish rack, src: retrieved }
+    count: { value: 1, src: retrieved }
+
+environment:
+  kind: { value: tabletop, src: retrieved }   # aloha_sim/assets/aloha/scene_pbr.xml (table_top); dish_on_rack.py TABLE_HEIGHT
+  items:
+    table: { category: { value: table, src: retrieved }, kind: { value: surface, src: retrieved } }
+
+acceptance:
+  success:
+    value:
+      - The plate and the bowl are both on the rack at the same time (each touches the rack and sits at least 2 cm above its base).
+      - The robot has released both dishes.
+      - The plate, the bowl and the rack are at rest.
+      - Dishes may be placed in any order.
+    src: estimated
+  failure: { value: ["The plate or the bowl falls off the table."], src: estimated }
+  time_limit_s: { value: 120, src: estimated }
+  obtained_by: { value: drafted, src: estimated }
+
+existing_eval:
+  value:
+    - "aloha_sim/tasks/bowl_on_rack.py: get_reward (dish-rack contact + dish z > rack z + 0.02 m + any_props_moving gate)"
+  src: retrieved
+
+variation:
+  axes:
+    object_instance:
+      normal: { value: "plates from projectsim/pools/plates.json, bowls from projectsim/pools/bowls.json; 1 of each held back as never-seen", src: estimated }
+    mass:
+      normal: { value: "per-material mass and centre of mass (ceramic vs melamine vs steel), not the repo's shared 200 kg/m3 density", src: supplied }   # DM call 11 Sep: mass distribution, centre of mass
+    friction:
+      normal: { value: "physically plausible per-material friction, not the repo's shared 1.0", src: supplied }   # DM call 3 Nov
+    object_pose:
+      normal: { value: "dishes x 0 to 0.25 m, y -0.2 to 0 m; rack x -0.1 to 0.1 m, y 0.18 to 0.25 m, yaw -90 deg +/- 3.6 deg", src: retrieved }   # dish_on_rack.py uniform distributions
+    lighting:
+      normal: { value: "kitchen lighting variation", src: estimated }
+    # instruction_wording comes from picks.yaml's wording (default, vague, specific)
+suite_size: { value: custom, src: estimated }   # DM call 12 Aug: "1000 env to throw the robot in"
+
+unknowns:
+  - { field: task.sentence, question: "Is 'put the plate and the bowl on the rack' how your team would phrase it, or should each dish stay its own task like BowlOnRack?", from_stage: 1, blocking: false }
+  - { field: assets, question: "The plate and bowl variants (ceramic dinner plate, melamine side plate, ceramic cereal bowl, steel bowl) are proposed. Swap in the dishes your real-robot evals use, if any.", from_stage: 1, blocking: false }
+  - { field: acceptance.success, question: "BowlOnRack only checks contact and height. Should a plate also have to stand in a slot (upright), as in a real drainer?", from_stage: 1, blocking: false }
+  - { field: goal.decision, question: "What will the sim results decide: model comparison, regression gating, or predicting real-robot success?", from_stage: 1, blocking: false }

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="clear_plastic_bin_on_the_top_shelf_of_the_right_shelving_unit">
+  <compiler angle="radian" coordinate="local" inertiafromgeom="auto" />
+  <option integrator="implicitfast" timestep="0.001" />
+  <custom />
+  <asset>
+    <mesh file="visuals\clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e" scale="1.0 1.0 1.0" />
+    <material name="Material_0_105" texture="Material_0_105" />
+    <texture builtin="none" file="visuals\textures\clear_plastic_bin_on_the_top_shelf_of_the_right_shelving_unit_basecolor_image0105.png" gridsize="1 1" mark="none" markrgb="0.0 0.0 0.0" name="Material_0_105" rgb1="0.8 0.8 0.8" rgb2="0.5 0.5 0.5" type="2d" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e001.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e001_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e002.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e002_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e003.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e003_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e004.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e004_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e005.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e005_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e006.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e006_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e007.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e007_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e008.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e008_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e009.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e009_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e010.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e010_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e011.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e011_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e012.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e012_mesh" />
+  </asset>
+  <worldbody>
+    <light cutoff="100" diffuse="1 1 1" dir="0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular="0.1 0.1 0.1" />
+    <body name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelving_unit" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+      <inertial pos="-8.80000007e-05 7.0000001e-06 0.0695279986" quat="0.999997138 -7.74976797e-05 0.000345228996 0.00236620148" diaginertia="0.000691213063 0.00104383589 0.00109845796" mass="0.172999993" />
+      <geom class="visual" material="Material_0_105" mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e" name="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e" pos="0.0 0.0 0.0" type="mesh" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e001_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e002_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e003_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e004_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e005_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e006_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e007_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e008_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e009_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e010_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e011_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_right_shelvin_4e0f22e012_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+    </body>
+  </worldbody>
+  <actuator />
+  <default>
+    <default class="visual">
+      <geom conaffinity="0" contype="0" group="1" type="mesh" />
+    </default>
+    <default class="collision">
+      <geom group="0" friction="0.28 0.005 0.0001" priority="1" solref="0.004 1" />
+    </default>
+  </default>
+</mujoco>

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="black_plastic_crate_on_the_workbench">
+  <compiler angle="radian" coordinate="local" inertiafromgeom="auto" />
+  <option integrator="implicitfast" timestep="0.001" />
+  <custom />
+  <asset>
+    <mesh file="visuals\black_plastic_crate_on_the_workbench_001.obj" name="black_plastic_crate_on_the_workbench_001" scale="1.0 1.0 1.0" />
+    <material name="Material_0_090" texture="Material_0_090" />
+    <texture builtin="none" file="visuals\textures\black_plastic_crate_on_the_workbench_basecolor_image0090.png" gridsize="1 1" mark="none" markrgb="0.0 0.0 0.0" name="Material_0_090" rgb1="0.8 0.8 0.8" rgb2="0.5 0.5 0.5" type="2d" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001001.obj" name="black_plastic_crate_on_the_workbench_001001_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001002.obj" name="black_plastic_crate_on_the_workbench_001002_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001003.obj" name="black_plastic_crate_on_the_workbench_001003_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001004.obj" name="black_plastic_crate_on_the_workbench_001004_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001005.obj" name="black_plastic_crate_on_the_workbench_001005_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001006.obj" name="black_plastic_crate_on_the_workbench_001006_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001007.obj" name="black_plastic_crate_on_the_workbench_001007_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001008.obj" name="black_plastic_crate_on_the_workbench_001008_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001009.obj" name="black_plastic_crate_on_the_workbench_001009_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001010.obj" name="black_plastic_crate_on_the_workbench_001010_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001011.obj" name="black_plastic_crate_on_the_workbench_001011_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_workbench_001012.obj" name="black_plastic_crate_on_the_workbench_001012_mesh" />
+  </asset>
+  <worldbody>
+    <light cutoff="100" diffuse="1 1 1" dir="0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular="0.1 0.1 0.1" />
+    <body name="black_plastic_crate_on_the_workbench" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+      <inertial pos="0.000322999986 -9.99999975e-05 0.0253720004" quat="0.999955601 -0.00360857744 0.000727437442 -0.00867433759" diaginertia="0.000117033283 0.000117930918 0.000207340941" mass="0.0410000011" />
+      <geom class="visual" material="Material_0_090" mesh="black_plastic_crate_on_the_workbench_001" name="black_plastic_crate_on_the_workbench_001" pos="0.0 0.0 0.0" type="mesh" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001001_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001002_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001003_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001004_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001005_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001006_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001007_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001008_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001009_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001010_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001011_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_workbench_001012_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+    </body>
+  </worldbody>
+  <actuator />
+  <default>
+    <default class="visual">
+      <geom conaffinity="0" contype="0" group="1" type="mesh" />
+    </default>
+    <default class="collision">
+      <geom group="0" friction="0.28 0.005 0.0001" priority="1" solref="0.004 1" />
+    </default>
+  </default>
+</mujoco>

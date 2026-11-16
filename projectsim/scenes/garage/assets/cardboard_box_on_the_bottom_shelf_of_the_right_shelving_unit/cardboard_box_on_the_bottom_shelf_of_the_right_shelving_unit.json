@@ -1,0 +1,37 @@
+{
+  "physics": {
+    "status": "rigid_body",
+    "material_class": "cardboard",
+    "density_kg_m3": 27.795565003880544,
+    "static_friction": 0.45,
+    "dynamic_friction": 0.35,
+    "restitution": 0.06,
+    "friction_source": "material_table",
+    "friction_model": "legacy",
+    "friction_convention": "pair_value_on_steel_dry",
+    "friction_combine_mode": "average",
+    "restitution_combine_mode": "max",
+    "restitution_convention": "pair_value_drop_test_on_hard_floor",
+    "colliders": 1,
+    "true_mesh_volume_m3": 0.0036336732131870453,
+    "authored_mass_kg": 0.101,
+    "fill_factor": 1.0,
+    "engine": "physx",
+    "center_of_mass_m": [
+      0.000241,
+      3.4e-05,
+      0.073087
+    ],
+    "diagonal_inertia_kgm2": [
+      0.0006124045833303026,
+      0.0006265723101233414,
+      0.0006580042199039398
+    ],
+    "principal_axes_quat_wxyz": [
+      0.6907891240482543,
+      -0.025230074836011186,
+      -0.0433263188897951,
+      0.7213159221255792
+    ]
+  }
+}

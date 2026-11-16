@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="orange_coiled_cable_on_the_workbench">
+  <compiler angle="radian" coordinate="local" inertiafromgeom="auto" />
+  <option integrator="implicitfast" timestep="0.001" />
+  <custom />
+  <asset>
+    <mesh file="visuals\orange_coiled_cable_on_the_workbench_001.obj" name="orange_coiled_cable_on_the_workbench_001" scale="1.0 1.0 1.0" />
+    <material name="Material_0_112" texture="Material_0_112" />
+    <texture builtin="none" file="visuals\textures\orange_coiled_cable_on_the_workbench_basecolor_image0112.png" gridsize="1 1" mark="none" markrgb="0.0 0.0 0.0" name="Material_0_112" rgb1="0.8 0.8 0.8" rgb2="0.5 0.5 0.5" type="2d" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001001.obj" name="orange_coiled_cable_on_the_workbench_001001_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001002.obj" name="orange_coiled_cable_on_the_workbench_001002_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001003.obj" name="orange_coiled_cable_on_the_workbench_001003_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001004.obj" name="orange_coiled_cable_on_the_workbench_001004_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001005.obj" name="orange_coiled_cable_on_the_workbench_001005_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001006.obj" name="orange_coiled_cable_on_the_workbench_001006_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001007.obj" name="orange_coiled_cable_on_the_workbench_001007_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001008.obj" name="orange_coiled_cable_on_the_workbench_001008_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001009.obj" name="orange_coiled_cable_on_the_workbench_001009_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001010.obj" name="orange_coiled_cable_on_the_workbench_001010_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001011.obj" name="orange_coiled_cable_on_the_workbench_001011_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001012.obj" name="orange_coiled_cable_on_the_workbench_001012_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001013.obj" name="orange_coiled_cable_on_the_workbench_001013_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001014.obj" name="orange_coiled_cable_on_the_workbench_001014_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001015.obj" name="orange_coiled_cable_on_the_workbench_001015_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001016.obj" name="orange_coiled_cable_on_the_workbench_001016_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001017.obj" name="orange_coiled_cable_on_the_workbench_001017_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001018.obj" name="orange_coiled_cable_on_the_workbench_001018_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001019.obj" name="orange_coiled_cable_on_the_workbench_001019_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001020.obj" name="orange_coiled_cable_on_the_workbench_001020_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001021.obj" name="orange_coiled_cable_on_the_workbench_001021_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001022.obj" name="orange_coiled_cable_on_the_workbench_001022_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001023.obj" name="orange_coiled_cable_on_the_workbench_001023_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001024.obj" name="orange_coiled_cable_on_the_workbench_001024_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001025.obj" name="orange_coiled_cable_on_the_workbench_001025_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001026.obj" name="orange_coiled_cable_on_the_workbench_001026_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001027.obj" name="orange_coiled_cable_on_the_workbench_001027_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001028.obj" name="orange_coiled_cable_on_the_workbench_001028_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001029.obj" name="orange_coiled_cable_on_the_workbench_001029_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001030.obj" name="orange_coiled_cable_on_the_workbench_001030_mesh" />
+    <mesh file="collision/orange_coiled_cable_on_the_workbench_001031.obj" name="orange_coiled_cable_on_the_workbench_001031_mesh" />
+  </asset>
+  <worldbody>
+    <light cutoff="100" diffuse="1 1 1" dir="0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular="0.1 0.1 0.1" />
+    <body name="orange_coiled_cable_on_the_workbench" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+      <inertial pos="0.000881000014 -0.00104100001 0.0157430004" quat="0.980581718 -0.000273592455 -0.00362883119 -0.196077157" diaginertia="0.000183415497 0.000192311098 0.000354012329" mass="0.170000002" />
+      <geom class="visual" material="Material_0_112" mesh="orange_coiled_cable_on_the_workbench_001" name="orange_coiled_cable_on_the_workbench_001" pos="0.0 0.0 0.0" type="mesh" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001001_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001002_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001003_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001004_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001005_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001006_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001007_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001008_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001009_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001010_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001011_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001012_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001013_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001014_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001015_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001016_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001017_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001018_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001019_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001020_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001021_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001022_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001023_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001024_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001025_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001026_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001027_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001028_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001029_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001030_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="orange_coiled_cable_on_the_workbench_001031_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+    </body>
+  </worldbody>
+  <actuator />
+  <default>
+    <default class="visual">
+      <geom conaffinity="0" contype="0" group="1" type="mesh" />
+    </default>
+    <default class="collision">
+      <geom group="0" friction="0.28 0.005 0.0001" priority="1" solref="0.004 1" />
+    </default>
+  </default>
+</mujoco>

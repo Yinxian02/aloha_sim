@@ -1,0 +1,71 @@
+# brief.yaml v1 for the garage demo (16 Nov 2026): one photo in, a sim-ready scene and a scored run out.
+# Input: inputs/garage_reference.webp. Outputs: projectsim/scenes/garage/ (39-asset MJCF with per-asset physics)
+# and outputs/garage-bin-rim-nominal/ (the run's own brief, scenario, results and episode video).
+# Field reference: docs/brief.md.
+
+id: BR-GARAGE-BIN-LIFT
+version: 1
+entry: environment   # the photo of the garage came first; the task was written for the scene
+
+task:
+  sentence: { value: "Lift the red plastic bin off the workbench by its rim, at least 10 cm, and hold it for 1 s.", src: retrieved }   # garage_bin_rim.yaml task.description
+goal:
+  value: "Show a task on a scene generated from one photo of a garage, the setting of the Gemini Robotics garage demos"
+  src: estimated
+  decision: { value: null, src: unknown }
+intended_use: { value: evaluation, src: supplied }   # DM calls 12 Aug + 3 Nov
+
+robot:
+  model: { value: generic_arm6, src: retrieved }   # garage_bin_rim.yaml robot.embodiment: built-in 6-DOF arm, parallel-jaw gripper
+simulator:
+  engine: { value: mujoco, src: retrieved }   # run: mujoco 3.12.0, timestep 0.002 s, implicitfast
+
+environment:
+  kind: { value: garage, src: retrieved }   # scene.description: mobile workbench, two shelving units, a desk; 39 sim-ready assets
+  references: { value: ["projectsim/tasks/garage_bin_lift/inputs/garage_reference.webp"], src: supplied }
+  scene: { value: "projectsim/scenes/garage/scene.xml", src: retrieved }
+  items:
+    workbench_01: { category: { value: workbench, src: retrieved }, kind: { value: surface, src: retrieved }, surface_z_m: { value: 0.479, src: retrieved } }
+
+assets:
+  red_bin_01:
+    label: { value: red plastic bin, src: retrieved }
+    files: { value: ["projectsim/scenes/garage/assets/red_plastic_bin_on_the_workbench/MJCF/red_plastic_bin_on_the_workbench.xml"], src: retrieved }
+    category: { value: bin, src: retrieved }
+    count: { value: 1, src: retrieved }
+    material: { value: { class: plastic, mass_kg: 0.118, friction: 0.6 }, src: retrieved }   # garage_bin_rim.yaml objects[bin].material
+    grasp: { value: { mode: rim, side: "+x", wall_m: 0.007, finger_depth_m: 0.02 }, src: retrieved }
+
+acceptance:
+  success:
+    value:
+      - The red bin is at least 10 cm above the bench top and stays there for 1 s.
+    src: retrieved
+  failure: { value: ["The red bin ends more than 5 cm below the bench top (knocked off)."], src: retrieved }
+  time_limit_s: { value: 20, src: retrieved }   # episode.max_duration_s; timeout_is_failure: true
+  obtained_by: { value: existing_code, src: retrieved }
+
+existing_eval:
+  value:
+    - "outputs/garage-bin-rim-nominal/garage_bin_rim.yaml: success height_above_table(bin) min 0.10 m hold 1 s; failure below_table(bin) margin 0.05 m"
+  src: retrieved
+
+variation:
+  axes:
+    mass:
+      normal: { value: "bin 0.08 to 0.40 kg (empty / loaded strata)", src: retrieved }
+    friction:
+      normal: { value: "bin 0.4 to 0.9", src: retrieved }
+    latency:
+      normal: { value: "action 0 to 120 ms; bin pose 0 to 80 ms", src: retrieved }
+    sensor_noise:
+      normal: { value: "bin position 0 to 6 mm", src: retrieved }
+    controller_gains:
+      normal: { value: "gripper close time 0.5 to 2.0 s (fast / nominal / slow strata)", src: retrieved }
+    robot_start:
+      normal: { value: "base calibration error up to 3 mm and 0.5 deg", src: retrieved }
+suite_size: { value: custom, src: estimated }
+
+unknowns:
+  - { field: robot.model, question: "The run uses a generic 6-DOF arm. Should this scene be run with ALOHA 2 instead, and where is it mounted on the bench?", from_stage: 1, blocking: false }
+  - { field: assets, question: "Some generated masses look off for real objects (soccer ball 0.07 kg, workbench classed as plastic). Which objects' physics matter for your evals?", from_stage: 1, blocking: false }

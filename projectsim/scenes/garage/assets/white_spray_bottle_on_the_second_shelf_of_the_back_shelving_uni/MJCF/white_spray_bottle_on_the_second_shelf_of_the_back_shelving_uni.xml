@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="white_spray_bottle_on_the_second_shelf_of_the_back_shelving_uni">
+  <compiler angle="radian" coordinate="local" inertiafromgeom="auto" />
+  <option integrator="implicitfast" timestep="0.001" />
+  <custom />
+  <asset>
+    <mesh file="visuals\white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c" scale="1.0 1.0 1.0" />
+    <material name="Material_0_118" texture="Material_0_118" />
+    <texture builtin="none" file="visuals\textures\white_spray_bottle_on_the_second_shelf_of_the_back_shelving_uni_basecolor_image0118.png" gridsize="1 1" mark="none" markrgb="0.0 0.0 0.0" name="Material_0_118" rgb1="0.8 0.8 0.8" rgb2="0.5 0.5 0.5" type="2d" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c001.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c001_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c002.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c002_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c003.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c003_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c004.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c004_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c005.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c005_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c006.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c006_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c007.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c007_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c008.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c008_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c009.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c009_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c010.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c010_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c011.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c011_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c012.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c012_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c013.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c013_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c014.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c014_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c015.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c015_mesh" />
+    <mesh file="collision/white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c016.obj" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c016_mesh" />
+  </asset>
+  <worldbody>
+    <light cutoff="100" diffuse="1 1 1" dir="0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular="0.1 0.1 0.1" />
+    <body name="white_spray_bottle_on_the_second_shelf_of_the_back_shelving_uni" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+      <inertial pos="-0.00180800003 0.00156100001 0.0536359996" quat="0.528107055 -0.462555862 0.534256883 0.470865793" diaginertia="5.84908339e-05 0.000238197259 0.000240605892" mass="0.192000002" />
+      <geom class="visual" material="Material_0_118" mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c" name="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c" pos="0.0 0.0 0.0" type="mesh" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c001_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c002_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c003_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c004_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c005_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c006_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c007_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c008_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c009_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c010_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c011_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c012_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c013_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c014_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c015_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="white_spray_bottle_on_the_second_shelf_of_the_back_shel_bf7ba6c016_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+    </body>
+  </worldbody>
+  <actuator />
+  <default>
+    <default class="visual">
+      <geom conaffinity="0" contype="0" group="1" type="mesh" />
+    </default>
+    <default class="collision">
+      <geom group="0" friction="0.28 0.005 0.0001" priority="1" solref="0.004 1" />
+    </default>
+  </default>
+</mujoco>

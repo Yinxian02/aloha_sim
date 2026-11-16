@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="blue_bottle_on_the_lower_shelf_of_the_workbench">
+  <compiler angle="radian" coordinate="local" inertiafromgeom="auto" />
+  <option integrator="implicitfast" timestep="0.001" />
+  <custom />
+  <asset>
+    <mesh file="visuals\blue_bottle_on_the_lower_shelf_of_the_workbench_001.obj" name="blue_bottle_on_the_lower_shelf_of_the_workbench_001" scale="1.0 1.0 1.0" />
+    <material name="Material_0_091" texture="Material_0_091" />
+    <texture builtin="none" file="visuals\textures\blue_bottle_on_the_lower_shelf_of_the_workbench_basecolor_image0091.png" gridsize="1 1" mark="none" markrgb="0.0 0.0 0.0" name="Material_0_091" rgb1="0.8 0.8 0.8" rgb2="0.5 0.5 0.5" type="2d" />
+    <mesh file="collision/blue_bottle_on_the_lower_shelf_of_the_workbench_001001.obj" name="blue_bottle_on_the_lower_shelf_of_the_workbench_001001_mesh" />
+    <mesh file="collision/blue_bottle_on_the_lower_shelf_of_the_workbench_001002.obj" name="blue_bottle_on_the_lower_shelf_of_the_workbench_001002_mesh" />
+  </asset>
+  <worldbody>
+    <light cutoff="100" diffuse="1 1 1" dir="0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular="0.1 0.1 0.1" />
+    <body name="blue_bottle_on_the_lower_shelf_of_the_workbench" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+      <inertial pos="2.40000008e-05 3.40000006e-05 0.0459639989" quat="0.127397434 -0.695258919 0.125844569 0.696094874" diaginertia="3.86633437e-05 0.000132180707 0.000132374931" mass="0.148000002" />
+      <geom class="visual" material="Material_0_091" mesh="blue_bottle_on_the_lower_shelf_of_the_workbench_001" name="blue_bottle_on_the_lower_shelf_of_the_workbench_001" pos="0.0 0.0 0.0" type="mesh" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="blue_bottle_on_the_lower_shelf_of_the_workbench_001001_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="blue_bottle_on_the_lower_shelf_of_the_workbench_001002_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+    </body>
+  </worldbody>
+  <actuator />
+  <default>
+    <default class="visual">
+      <geom conaffinity="0" contype="0" group="1" type="mesh" />
+    </default>
+    <default class="collision">
+      <geom group="0" friction="0.28 0.005 0.0001" priority="1" solref="0.004 1" />
+    </default>
+  </default>
+</mujoco>

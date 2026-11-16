@@ -1,0 +1,81 @@
+# brief.yaml v1, drafted by the projectsim task-generation skill for the Google DeepMind demo (16 Nov 2026).
+# Brings the grocery-shelf setting DeepMind evaluated in (scene delivered 20 Oct 2026) onto the ALOHA tabletop.
+# Field reference: docs/brief.md.
+
+id: BR-CANS-ON-SHELF
+version: 1
+entry: task
+
+task:
+  sentence: { value: "put the cans on the top shelf", src: estimated }
+goal:
+  value: "Evaluate a Gemini Robotics policy restocking a grocery shelf without disturbing what is already on it"
+  src: estimated
+  decision: { value: null, src: unknown }
+intended_use: { value: evaluation, src: supplied }   # DM call 3 Nov: they ran evaluations on the grocery shelf scene
+task_families:
+  value:
+    - { name: restock_shelf, examples: ["put the cans on the top shelf"] }
+  src: estimated
+
+robot:
+  model: { value: ALOHA 2, src: retrieved }
+simulator:
+  engine: { value: mujoco, src: supplied }
+policy:
+  checkpoint: { value: "Gemini Robotics model served via gemini-robotics-sdk (Trusted Testers)", src: retrieved }
+  reads_instruction: { value: true, src: retrieved }
+
+assets:
+  can_01:
+    label: { value: soup can, src: estimated }
+    files: { value: [], src: supplied }
+    category: { value: can, src: estimated }
+    count: { value: 1, src: estimated }
+  can_02:
+    label: { value: chopped tomato can, src: estimated }
+    files: { value: [], src: supplied }
+    category: { value: can, src: estimated }
+    count: { value: 1, src: estimated }
+  cereal_box_01:
+    label: { value: cereal box, src: estimated }
+    files: { value: [], src: supplied }
+    category: { value: box, src: estimated }
+    count: { value: 1, src: estimated }
+  shelf_01:
+    label: { value: two-tier grocery shelf, src: estimated }
+    files: { value: [], src: supplied }
+    category: { value: shelf, src: estimated }
+    count: { value: 1, src: estimated }
+
+acceptance:
+  success:
+    value:
+      - Both cans are on the top shelf, upright, at the same time.
+      - The robot has released both cans.
+      - The cereal box has not been knocked over or moved off the bottom shelf.
+      - The cans, the cereal box and the shelf are at rest.
+    src: estimated
+  failure: { value: ["The cereal box is knocked over or displaced.", "A can falls off the shelf or the table."], src: estimated }
+  time_limit_s: { value: 120, src: estimated }
+  obtained_by: { value: drafted, src: estimated }
+
+existing_eval: { value: [], src: retrieved }   # aloha_sim has no shelf task
+
+variation:
+  axes:
+    object_instance:
+      normal: { value: "grocery items drawn from the shelf scene's product set; 2 held back as never-seen", src: estimated }
+    mass:
+      normal: { value: "per-product mass and centre of mass (full vs half-empty cans, light cereal box)", src: supplied }   # DM call 11 Sep
+    friction:
+      normal: { value: "physically plausible friction for steel cans and cardboard on a shelf", src: supplied }   # DM call 3 Nov
+    distractors:
+      normal: { value: "other products already on the shelf", src: estimated }
+    lighting:
+      normal: { value: "store lighting variation", src: estimated }
+
+unknowns:
+  - { field: shelf_01, question: "Should the shelf be cut down from the two-bay retail shelf we delivered (20 Oct), or generated fresh at ALOHA tabletop scale?", from_stage: 1, blocking: false }
+  - { field: assets, question: "Which products from your grocery-shelf evals should the cans and distractors be?", from_stage: 1, blocking: false }
+  - { field: robot.model, question: "Reachability to the top shelf was not validated; shelf height and placement relative to ALOHA are not set.", from_stage: 1, blocking: false }

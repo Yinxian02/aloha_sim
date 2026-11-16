@@ -1,0 +1,57 @@
+# brief.yaml v2: the task block stage 2 adds. Generated from /Users/sofialiang/Documents/GitHub/aloha_sim/projectsim/tasks/garage_bin_lift/picks.yaml
+# by taskgen/build_task_block.py (plain code, no AI); edit the picks, not this file.
+task:
+  version: 0
+  brief_id: "BR-GARAGE-BIN-LIFT"
+  drafted_by: {picks: "hand-written (stands in for the AI step)", code: "taskgen/build_task_block.py", lists: "v2"}
+  sentence:  # the customer's words, unedited (the robot model's instruction); q1, q2 ... are its sentences
+    text: "Lift the red plastic bin off the workbench by its rim, at least 10 cm, and hold it for 1 s."
+    src: "retrieved"
+    from: "brief.task.sentence"
+    quotes: {q1: "Lift the red plastic bin off the workbench by its rim, at least 10 cm, and hold it for 1 s."}
+  roles:  # who is who (roles.yaml); ref = brief asset or item
+    robot: {type: "actor", ref: "brief.robot", src: "supplied"}
+    bin: {type: "target", name: "the red bin", ref: "brief.assets.red_bin_01", select: {category: "bin"}, amount: "one", src: "supplied", from: "q1"}
+    bench: {type: "source", name: "the workbench", ref: "brief.environment.items.workbench_01", src: "supplied", from: "q1"}
+  verbs:  # the expected steps (verbs.yaml): the method, not a requirement
+    - {verb: "pick", args: {target: "bin", source: "bench"}}
+  initial_state:  # what the steps need before they start (worked out by code)
+    - {says: "the red bin is at the workbench", fact: "at(bin, bench)", src: "estimated", from: "verb.pick"}
+    - {says: "the gripper is empty", fact: "gripper_empty", src: "estimated", from: "verb.pick"}
+  final_state:  # what the steps leave behind; success is judged on the lines with an id
+    - {id: "C1", says: "the red bin is lifted", fact: "lifted(bin)", src: "supplied", from: "brief.acceptance.success[0]", numbers: "A1"}
+  constraints:  # rules for the whole run: never / always / limit
+    - {id: "C2", kind: "never", says: "the red bin fell off the workbench", fact: "fell_off(bin, bench)", src: "supplied", from: "brief.acceptance.failure[0]"}
+    - {id: "C3", kind: "never", says: "the red bin was dropped", fact: "dropped(bin)", src: "estimated", from: "verb.pick default"}
+    - {id: "C4", kind: "limit", says: "the task is done within 20 s", fact: "within(task, 20 s)", src: "retrieved", from: "brief.acceptance.time_limit_s"}
+  success:  # how one run passes: the end checks hold for hold_s at the end, and no rule check fails
+    says: "a run passes when every end check holds for 1 s at the end and no rule check fails during the run"
+    end_checks: ["C1"]
+    rule_checks: ["C2", "C3", "C4"]
+    hold_s: 1
+    src: "estimated"
+    from: "default: held 1 s"
+  assumptions:  # properties the steps rely on; checked in later stages
+    - {fact: "graspable(bin)", check_in: "stage 4 (asset grasp regions)", from: "verb.pick"}
+    - {fact: "reachable(bin)", check_in: "stage 3 / 5 (inverse kinematics)", from: "verb.pick"}
+    - {fact: "free_top(bin)", check_in: "stage 5 (nothing is placed on the target at the start unless the task says so)", from: "verb.pick"}
+  variability:  # what varies between runs (axes.yaml): names only, stage 3 sets ranges
+    - {axis: "mass", of: "bin", says: "object weight", normal: "bin 0.08 to 0.40 kg (empty / loaded strata)", src: "retrieved"}
+    - {axis: "friction", of: "bin", says: "how slippery surfaces are", normal: "bin 0.4 to 0.9", src: "retrieved"}
+    - {axis: "latency", says: "delay between sensing and acting", normal: "action 0 to 120 ms; bin pose 0 to 80 ms", src: "retrieved"}
+    - {axis: "sensor_noise", says: "noise in images or joint readings", normal: "bin position 0 to 6 mm", src: "retrieved"}
+    - {axis: "controller_gains", says: "controller settings such as stiffness and damping", normal: "gripper close time 0.5 to 2.0 s (fast / nominal / slow strata)", src: "retrieved"}
+    - {axis: "robot_start", says: "where the arm starts", normal: "base calibration error up to 3 mm and 0.5 deg", src: "retrieved"}
+  exclusions: []  # not simulated in this version
+  ambiguities:  # open questions, each routed to who answers it
+    - {id: "A1", term: "lifted", why: "needs numbers: height (cm)", goes_to: "stage_3", defaults_seen: ["Arena LiftObjectTask: 0.3 m above the start, tolerance 0.05 m"], status: "open"}
+    - {id: "A2", term: "The run uses a generic 6-DOF arm. Should this scene be run with ALOHA 2 instead, and where is it mounted on the bench?", why: "listed as unknown in the brief (brief.unknowns[0])", goes_to: "stage_1", links: "brief.robot.model", status: "open"}
+    - {id: "A3", term: "Some generated masses look off for real objects (soccer ball 0.07 kg, workbench classed as plastic). Which objects' physics matter for your evals?", why: "listed as unknown in the brief (brief.unknowns[1])", goes_to: "stage_1", links: "brief.assets", status: "open"}
+  check:  # automatic checks on this block
+    passed: true
+    valid: true
+    coverage: {customer_words: 3, covered: 3, unmatched_items: 0}
+    errors: []
+    warnings: ["rule not on the board yet: Lifted (from lifted; proposed to Chaitu)"]
+    compare_with: ["brief.acceptance.success", "brief.existing_eval"]
+  approved_by: {role: "customer domain expert", name: null, at: null}  # filled when the customer's expert signs off

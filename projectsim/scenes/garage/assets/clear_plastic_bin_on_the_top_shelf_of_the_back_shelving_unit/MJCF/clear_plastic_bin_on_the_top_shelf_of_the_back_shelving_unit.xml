@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_unit">
+  <compiler angle="radian" coordinate="local" inertiafromgeom="auto" />
+  <option integrator="implicitfast" timestep="0.001" />
+  <custom />
+  <asset>
+    <mesh file="visuals\clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55" scale="1.0 1.0 1.0" />
+    <material name="Material_0_104" texture="Material_0_104" />
+    <texture builtin="none" file="visuals\textures\clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_unit_basecolor_image0104.png" gridsize="1 1" mark="none" markrgb="0.0 0.0 0.0" name="Material_0_104" rgb1="0.8 0.8 0.8" rgb2="0.5 0.5 0.5" type="2d" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55001.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55001_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55002.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55002_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55003.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55003_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55004.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55004_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55005.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55005_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55006.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55006_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55007.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55007_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55008.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55008_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55009.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55009_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55010.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55010_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55011.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55011_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55012.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55012_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55013.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55013_mesh" />
+    <mesh file="collision/clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55014.obj" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55014_mesh" />
+  </asset>
+  <worldbody>
+    <light cutoff="100" diffuse="1 1 1" dir="0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular="0.1 0.1 0.1" />
+    <body name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_unit" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+      <inertial pos="-0.000136000002 -1.99999999e-06 0.0794809982" quat="0.704368675 -0.000680529536 0.000497230171 -0.709833825" diaginertia="0.00878501963 0.0149797983 0.0164649189" mass="1.98399997" />
+      <geom class="visual" material="Material_0_104" mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55" name="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55" pos="0.0 0.0 0.0" type="mesh" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55001_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55002_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55003_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55004_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55005_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55006_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55007_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55008_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55009_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55010_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55011_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55012_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55013_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="clear_plastic_bin_on_the_top_shelf_of_the_back_shelving_df4bf55014_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+    </body>
+  </worldbody>
+  <actuator />
+  <default>
+    <default class="visual">
+      <geom conaffinity="0" contype="0" group="1" type="mesh" />
+    </default>
+    <default class="collision">
+      <geom group="0" friction="0.28 0.005 0.0001" priority="1" solref="0.004 1" />
+    </default>
+  </default>
+</mujoco>

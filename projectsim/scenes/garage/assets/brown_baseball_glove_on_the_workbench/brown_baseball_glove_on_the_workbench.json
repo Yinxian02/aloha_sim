@@ -1,0 +1,37 @@
+{
+  "physics": {
+    "status": "rigid_body",
+    "material_class": "leather",
+    "density_kg_m3": 138.75227286614745,
+    "static_friction": 0.55,
+    "dynamic_friction": 0.45,
+    "restitution": 0.1,
+    "friction_source": "material_table",
+    "friction_model": "legacy",
+    "friction_convention": "pair_value_on_steel_dry",
+    "friction_combine_mode": "average",
+    "restitution_combine_mode": "max",
+    "restitution_convention": "pair_value_drop_test_on_hard_floor",
+    "colliders": 1,
+    "true_mesh_volume_m3": 0.0005167482918940584,
+    "authored_mass_kg": 0.072,
+    "fill_factor": 1.0,
+    "engine": "physx",
+    "center_of_mass_m": [
+      -0.011564,
+      -0.001501,
+      0.034856
+    ],
+    "diagonal_inertia_kgm2": [
+      8.832572265609655e-05,
+      0.00010642649076769436,
+      0.00015979001735806097
+    ],
+    "principal_axes_quat_wxyz": [
+      0.971519655857892,
+      -0.004580935709448092,
+      0.007786330514991192,
+      -0.2367867107058594
+    ]
+  }
+}

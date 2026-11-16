@@ -1,0 +1,4 @@
+{
+  "description": "Plate instances for dishes_on_rack. ProjectSim samples from these; held-back instances are never seen in tuning and only appear in the exam set.",
+  "objects": ["plate_01", "plate_02", "plate_03"]
+}

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="cardboard_box_with_yellow_label_on_the_third_shelf_of_the_right">
+  <compiler angle="radian" coordinate="local" inertiafromgeom="auto" />
+  <option integrator="implicitfast" timestep="0.001" />
+  <custom />
+  <asset>
+    <mesh file="visuals\cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278" scale="1.0 1.0 1.0" />
+    <material name="Material_0_103" texture="Material_0_103" />
+    <texture builtin="none" file="visuals\textures\cardboard_box_with_yellow_label_on_the_third_shelf_of_the_right_basecolor_image0103.png" gridsize="1 1" mark="none" markrgb="0.0 0.0 0.0" name="Material_0_103" rgb1="0.8 0.8 0.8" rgb2="0.5 0.5 0.5" type="2d" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278001.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278001_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278002.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278002_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278003.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278003_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278004.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278004_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278005.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278005_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278006.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278006_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278007.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278007_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278008.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278008_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278009.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278009_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278010.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278010_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278011.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278011_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278012.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278012_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278013.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278013_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278014.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278014_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278015.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278015_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278016.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278016_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278017.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278017_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278018.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278018_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278019.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278019_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278020.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278020_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278021.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278021_mesh" />
+    <mesh file="collision/cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278022.obj" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278022_mesh" />
+  </asset>
+  <worldbody>
+    <light cutoff="100" diffuse="1 1 1" dir="0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular="0.1 0.1 0.1" />
+    <body name="cardboard_box_with_yellow_label_on_the_third_shelf_of_the_right" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+      <inertial pos="0.00117800001 -3.09999996e-05 0.0710180029" quat="0.566022879 -0.155460687 -0.178016992 -0.789784797" diaginertia="0.00052213564 0.000533405575 0.000629546936" mass="0.0820000023" />
+      <geom class="visual" material="Material_0_103" mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278" name="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278" pos="0.0 0.0 0.0" type="mesh" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278001_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278002_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278003_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278004_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278005_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278006_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278007_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278008_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278009_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278010_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278011_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278012_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278013_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278014_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278015_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278016_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278017_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278018_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278019_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278020_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278021_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="cardboard_box_with_yellow_label_on_the_third_shelf_of_t_2688278022_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+    </body>
+  </worldbody>
+  <actuator />
+  <default>
+    <default class="visual">
+      <geom conaffinity="0" contype="0" group="1" type="mesh" />
+    </default>
+    <default class="collision">
+      <geom group="0" friction="0.35 0.005 0.0001" priority="1" solref="0.004 1" />
+    </default>
+  </default>
+</mujoco>

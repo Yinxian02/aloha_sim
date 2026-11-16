@@ -1,0 +1,37 @@
+{
+  "physics": {
+    "status": "rigid_body",
+    "material_class": "glass",
+    "density_kg_m3": 1270.0017905229863,
+    "static_friction": 0.55,
+    "dynamic_friction": 0.4,
+    "restitution": 0.08,
+    "friction_source": "material_table",
+    "friction_model": "legacy",
+    "friction_convention": "pair_value_on_steel_dry",
+    "friction_combine_mode": "average",
+    "restitution_combine_mode": "max",
+    "restitution_convention": "pair_value_drop_test_on_hard_floor",
+    "colliders": 1,
+    "true_mesh_volume_m3": 0.00029763737564837586,
+    "authored_mass_kg": 0.378,
+    "fill_factor": 1.0,
+    "engine": "physx",
+    "center_of_mass_m": [
+      -3.3e-05,
+      6.4e-05,
+      0.045845
+    ],
+    "diagonal_inertia_kgm2": [
+      0.00017867497400669247,
+      0.0003617805112519684,
+      0.0003767456610004366
+    ],
+    "principal_axes_quat_wxyz": [
+      0.47556430235963276,
+      0.523320321824958,
+      -0.4753922304328985,
+      0.5234278004942536
+    ]
+  }
+}

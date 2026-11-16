@@ -1,0 +1,178 @@
+{
+ "summary": {
+  "scenario_id": "garage-bin-rim-nominal",
+  "task_id": "garage_bin_lift@1",
+  "policy": "scripted_pick",
+  "policy_args": {},
+  "source": "briefs/garage_bin_rim.yaml",
+  "brief": "briefs/garage_bin_rim.yaml",
+  "episodes": 3,
+  "successes": 3,
+  "success_rate": 1.0,
+  "outcomes": {
+   "success": 3
+  }
+ },
+ "conversion": {
+  "engine": "mujoco 3.12.0",
+  "converter": "scenariogen 0.1.0",
+  "model": {
+   "nq": 15,
+   "nv": 14,
+   "nu": 8,
+   "nbody": 50,
+   "timestep_s": 0.002
+  },
+  "unmapped": [
+   {
+    "param": "objects.bin.material.restitution",
+    "value": 0.35,
+    "reason": "MuJoCo has no restitution coefficient; contact softness comes from solref/solimp"
+   }
+  ],
+  "warnings": []
+ },
+ "episodes": [
+  {
+   "file": "episode_000.json",
+   "scenario_id": "garage-bin-rim-nominal",
+   "episode_index": 0,
+   "noise_seed": 0,
+   "outcome": "success",
+   "success": true,
+   "duration_s": 7.4,
+   "success_time_s": 7.4,
+   "initial_state_checks": {
+    "on_table(bin)": true,
+    "gripper_open()": true
+   },
+   "success_checks": {
+    "height_above_table(bin) min_m=0.1": {
+     "satisfied": true,
+     "held_s": 1.0,
+     "hold_s": 1.0,
+     "first_true_t": 6.399999999999406
+    }
+   },
+   "failure_checks": {
+    "below_table(bin) margin_m=0.05": {
+     "satisfied": false,
+     "held_s": 0.0,
+     "hold_s": 0.0,
+     "first_true_t": null
+    }
+   },
+   "policy_info": {
+    "approach_s": 2.5,
+    "descend_s": 1.5,
+    "grasp_wait_s": 1.0,
+    "lift_s": 2.0,
+    "pregrasp_height": 0.12,
+    "lift_height": 0.2,
+    "site": 0,
+    "g_cmd": 0.0,
+    "sensor_name": "bin_pose_obs",
+    "grasp_mode": "rim",
+    "phase": "hold",
+    "phase_t0": 5.049999999999555,
+    "ik_failures": 0
+   },
+   "error": null,
+   "n_log": 148
+  },
+  {
+   "file": "episode_001.json",
+   "scenario_id": "garage-bin-rim-nominal",
+   "episode_index": 1,
+   "noise_seed": 0,
+   "outcome": "success",
+   "success": true,
+   "duration_s": 7.4,
+   "success_time_s": 7.4,
+   "initial_state_checks": {
+    "on_table(bin)": true,
+    "gripper_open()": true
+   },
+   "success_checks": {
+    "height_above_table(bin) min_m=0.1": {
+     "satisfied": true,
+     "held_s": 1.0,
+     "hold_s": 1.0,
+     "first_true_t": 6.399999999999406
+    }
+   },
+   "failure_checks": {
+    "below_table(bin) margin_m=0.05": {
+     "satisfied": false,
+     "held_s": 0.0,
+     "hold_s": 0.0,
+     "first_true_t": null
+    }
+   },
+   "policy_info": {
+    "approach_s": 2.5,
+    "descend_s": 1.5,
+    "grasp_wait_s": 1.0,
+    "lift_s": 2.0,
+    "pregrasp_height": 0.12,
+    "lift_height": 0.2,
+    "site": 0,
+    "g_cmd": 0.0,
+    "sensor_name": "bin_pose_obs",
+    "grasp_mode": "rim",
+    "phase": "hold",
+    "phase_t0": 5.049999999999555,
+    "ik_failures": 0
+   },
+   "error": null,
+   "n_log": 148
+  },
+  {
+   "file": "episode_002.json",
+   "scenario_id": "garage-bin-rim-nominal",
+   "episode_index": 2,
+   "noise_seed": 0,
+   "outcome": "success",
+   "success": true,
+   "duration_s": 7.4,
+   "success_time_s": 7.4,
+   "initial_state_checks": {
+    "on_table(bin)": true,
+    "gripper_open()": true
+   },
+   "success_checks": {
+    "height_above_table(bin) min_m=0.1": {
+     "satisfied": true,
+     "held_s": 1.0,
+     "hold_s": 1.0,
+     "first_true_t": 6.399999999999406
+    }
+   },
+   "failure_checks": {
+    "below_table(bin) margin_m=0.05": {
+     "satisfied": false,
+     "held_s": 0.0,
+     "hold_s": 0.0,
+     "first_true_t": null
+    }
+   },
+   "policy_info": {
+    "approach_s": 2.5,
+    "descend_s": 1.5,
+    "grasp_wait_s": 1.0,
+    "lift_s": 2.0,
+    "pregrasp_height": 0.12,
+    "lift_height": 0.2,
+    "site": 0,
+    "g_cmd": 0.0,
+    "sensor_name": "bin_pose_obs",
+    "grasp_mode": "rim",
+    "phase": "hold",
+    "phase_t0": 5.049999999999555,
+    "ik_failures": 0
+   },
+   "error": null,
+   "n_log": 148
+  }
+ ]
+}

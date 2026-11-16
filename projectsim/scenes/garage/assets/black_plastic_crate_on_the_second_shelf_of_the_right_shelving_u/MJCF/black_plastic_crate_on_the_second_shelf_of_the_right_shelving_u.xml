@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="black_plastic_crate_on_the_second_shelf_of_the_right_shelving_u">
+  <compiler angle="radian" coordinate="local" inertiafromgeom="auto" />
+  <option integrator="implicitfast" timestep="0.001" />
+  <custom />
+  <asset>
+    <mesh file="visuals\black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673" scale="1.0 1.0 1.0" />
+    <material name="Material_0_088" texture="Material_0_088" />
+    <texture builtin="none" file="visuals\textures\black_plastic_crate_on_the_second_shelf_of_the_right_shelving_u_basecolor_image0088.png" gridsize="1 1" mark="none" markrgb="0.0 0.0 0.0" name="Material_0_088" rgb1="0.8 0.8 0.8" rgb2="0.5 0.5 0.5" type="2d" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673001.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673001_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673002.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673002_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673003.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673003_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673004.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673004_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673005.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673005_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673006.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673006_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673007.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673007_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673008.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673008_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673009.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673009_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673010.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673010_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673011.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673011_mesh" />
+    <mesh file="collision/black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673012.obj" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673012_mesh" />
+  </asset>
+  <worldbody>
+    <light cutoff="100" diffuse="1 1 1" dir="0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular="0.1 0.1 0.1" />
+    <body name="black_plastic_crate_on_the_second_shelf_of_the_right_shelving_u" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+      <inertial pos="-0.000348000001 -0.000315999991 0.0487519987" quat="0.995999327 0.00033693804 0.000218387225 0.0893598339" diaginertia="0.00168948469 0.00171792996 0.00279461662" mass="0.216999993" />
+      <geom class="visual" material="Material_0_088" mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673" name="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673" pos="0.0 0.0 0.0" type="mesh" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673001_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673002_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673003_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673004_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673005_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673006_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673007_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673008_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673009_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673010_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673011_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="black_plastic_crate_on_the_second_shelf_of_the_right_sh_3370673012_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+    </body>
+  </worldbody>
+  <actuator />
+  <default>
+    <default class="visual">
+      <geom conaffinity="0" contype="0" group="1" type="mesh" />
+    </default>
+    <default class="collision">
+      <geom group="0" friction="0.28 0.005 0.0001" priority="1" solref="0.004 1" />
+    </default>
+  </default>
+</mujoco>

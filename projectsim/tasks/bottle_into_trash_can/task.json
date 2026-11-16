@@ -1,0 +1,137 @@
+{
+  "id": "bottle_into_trash_can",
+  "instruction": "put a bottle into a trash can",
+  "robot": "ALOHA",
+  "object_ids": [
+    "bottle_01",
+    "bottle_02",
+    "bottle_03",
+    "bottle_04",
+    "trash_bin_01"
+  ],
+  "destination": "trash_bin_01",
+  "time_limit_s": 180,
+  "order": "any",
+  "success_conditions": [
+    "All four bottles (bottle_01, bottle_02, bottle_03, bottle_04) are inside the trash can at the same time (each bottle's bounding box overlaps the trash can's interior region).",
+    "The robot has released every bottle.",
+    "All bottles and the trash can are at rest (not moving).",
+    "Bottles may be placed in any order."
+  ],
+  "success": {
+    "when": "end",
+    "conditions": [
+      {
+        "fact": "in(bottle_01, trash_bin_01)",
+        "says": "the small bottle is in the trash bin",
+        "src": "supplied",
+        "from": "stage 1"
+      },
+      {
+        "fact": "in(bottle_02, trash_bin_01)",
+        "says": "the medium bottle is in the trash bin",
+        "src": "supplied",
+        "from": "stage 1"
+      },
+      {
+        "fact": "in(bottle_03, trash_bin_01)",
+        "says": "the large bottle is in the trash bin",
+        "src": "supplied",
+        "from": "stage 1"
+      },
+      {
+        "fact": "in(bottle_04, trash_bin_01)",
+        "says": "the extra-large bottle is in the trash bin",
+        "src": "supplied",
+        "from": "stage 1"
+      },
+      {
+        "fact": "released(bottle_01)",
+        "says": "the small bottle is released",
+        "src": "supplied",
+        "from": "stage 1"
+      },
+      {
+        "fact": "released(bottle_02)",
+        "says": "the medium bottle is released",
+        "src": "supplied",
+        "from": "stage 1"
+      },
+      {
+        "fact": "released(bottle_03)",
+        "says": "the large bottle is released",
+        "src": "supplied",
+        "from": "stage 1"
+      },
+      {
+        "fact": "released(bottle_04)",
+        "says": "the extra-large bottle is released",
+        "src": "supplied",
+        "from": "stage 1"
+      },
+      {
+        "fact": "stable(bottle_01)",
+        "says": "the small bottle stays still",
+        "src": "estimated",
+        "from": "stage 1"
+      },
+      {
+        "fact": "stable(bottle_02)",
+        "says": "the medium bottle stays still",
+        "src": "estimated",
+        "from": "stage 1"
+      },
+      {
+        "fact": "stable(bottle_03)",
+        "says": "the large bottle stays still",
+        "src": "estimated",
+        "from": "stage 1"
+      },
+      {
+        "fact": "stable(bottle_04)",
+        "says": "the extra-large bottle stays still",
+        "src": "estimated",
+        "from": "stage 1"
+      },
+      {
+        "fact": "stable(trash_bin_01)",
+        "says": "the trash bin stays still",
+        "src": "estimated",
+        "from": "stage 1"
+      }
+    ]
+  },
+  "failure": [],
+  "initial_state": [
+    {
+      "fact": "gripper_empty()",
+      "says": "the gripper is empty",
+      "src": "estimated",
+      "from": "stage 1"
+    },
+    {
+      "fact": "released(bottle_01)",
+      "says": "the small bottle starts resting, not held",
+      "src": "estimated",
+      "from": "stage 1"
+    },
+    {
+      "fact": "released(bottle_02)",
+      "says": "the medium bottle starts resting, not held",
+      "src": "estimated",
+      "from": "stage 1"
+    },
+    {
+      "fact": "released(bottle_03)",
+      "says": "the large bottle starts resting, not held",
+      "src": "estimated",
+      "from": "stage 1"
+    },
+    {
+      "fact": "released(bottle_04)",
+      "says": "the extra-large bottle starts resting, not held",
+      "src": "estimated",
+      "from": "stage 1"
+    }
+  ]
+}

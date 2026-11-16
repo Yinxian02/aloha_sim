@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="mobile_workbench">
+  <compiler angle="radian" coordinate="local" inertiafromgeom="auto" />
+  <option integrator="implicitfast" timestep="0.001" />
+  <custom />
+  <asset>
+    <mesh file="visuals\mobile_workbench_001.obj" name="mobile_workbench_001" scale="1.0 1.0 1.0" />
+    <material name="Material_0_110" texture="Material_0_110" />
+    <texture builtin="none" file="visuals\textures\mobile_workbench_basecolor_image0110.png" gridsize="1 1" mark="none" markrgb="0.0 0.0 0.0" name="Material_0_110" rgb1="0.8 0.8 0.8" rgb2="0.5 0.5 0.5" type="2d" />
+    <mesh file="collision/mobile_workbench_001001.obj" name="mobile_workbench_001001_mesh" />
+    <mesh file="collision/mobile_workbench_001002.obj" name="mobile_workbench_001002_mesh" />
+    <mesh file="collision/mobile_workbench_001003.obj" name="mobile_workbench_001003_mesh" />
+    <mesh file="collision/mobile_workbench_001004.obj" name="mobile_workbench_001004_mesh" />
+    <mesh file="collision/mobile_workbench_001005.obj" name="mobile_workbench_001005_mesh" />
+    <mesh file="collision/mobile_workbench_001006.obj" name="mobile_workbench_001006_mesh" />
+    <mesh file="collision/mobile_workbench_001007.obj" name="mobile_workbench_001007_mesh" />
+    <mesh file="collision/mobile_workbench_001008.obj" name="mobile_workbench_001008_mesh" />
+    <mesh file="collision/mobile_workbench_001009.obj" name="mobile_workbench_001009_mesh" />
+    <mesh file="collision/mobile_workbench_001010.obj" name="mobile_workbench_001010_mesh" />
+    <mesh file="collision/mobile_workbench_001011.obj" name="mobile_workbench_001011_mesh" />
+  </asset>
+  <worldbody>
+    <light cutoff="100" diffuse="1 1 1" dir="0 0 -1.3" directional="true" exponent="1" pos="0 0 1.3" specular="0.1 0.1 0.1" />
+    <body name="mobile_workbench" pos="0.0 0.0 0.0" quat="1.0 0.0 0.0 0.0">
+      <inertial pos="0.00115499995 -0.00119500002 0.289395988" quat="0.999633754 -0.0265427201 0.00275760454 0.00449850747" diaginertia="1.83848524 4.1818552 4.22680807" mass="28.3050003" />
+      <geom class="visual" material="Material_0_110" mesh="mobile_workbench_001" name="mobile_workbench_001" pos="0.0 0.0 0.0" type="mesh" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="mobile_workbench_001001_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="mobile_workbench_001002_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="mobile_workbench_001003_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="mobile_workbench_001004_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="mobile_workbench_001005_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="mobile_workbench_001006_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="mobile_workbench_001007_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="mobile_workbench_001008_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="mobile_workbench_001009_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="mobile_workbench_001010_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+      <geom mesh="mobile_workbench_001011_mesh" type="mesh" class="collision" pos="0.0 0.0 0.0" quat="0.9999999999999967 -8.161702118890966e-08 0.0 0.0" />
+    </body>
+  </worldbody>
+  <actuator />
+  <default>
+    <default class="visual">
+      <geom conaffinity="0" contype="0" group="1" type="mesh" />
+    </default>
+    <default class="collision">
+      <geom group="0" friction="0.28 0.005 0.0001" priority="1" solref="0.004 1" />
+    </default>
+  </default>
+</mujoco>

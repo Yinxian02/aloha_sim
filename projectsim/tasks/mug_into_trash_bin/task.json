@@ -1,0 +1,52 @@
+{
+  "id": "mug_into_trash_bin",
+  "instruction": "put a mug into a bin",
+  "robot": "ALOHA",
+  "object_ids": ["mug_01", "trash_bin_01"],
+  "destination": "trash_bin_01",
+  "time_limit_s": 60,
+  "order": "any",
+  "success_conditions": [
+    "The mug is inside the bin (its bounding box overlaps the bin's interior region).",
+    "The robot has released the mug.",
+    "The mug and the bin are at rest (not moving)."
+  ],
+  "success": {
+    "when": "end",
+    "conditions": [
+      {
+        "fact": "in(mug_01, trash_bin_01)",
+        "says": "the mug is in the trash bin",
+        "src": "estimated",
+        "from": "stage 1"
+      },
+      {
+        "fact": "released(mug_01)",
+        "says": "the mug is released",
+        "src": "estimated",
+        "from": "stage 1"
+      },
+      {
+        "fact": "stable(mug_01)",
+        "says": "the mug stays still",
+        "src": "estimated",
+        "from": "stage 1"
+      }
+    ]
+  },
+  "failure": [],
+  "initial_state": [
+    {
+      "fact": "gripper_empty()",
+      "says": "the gripper is empty",
+      "src": "estimated",
+      "from": "stage 1"
+    },
+    {
+      "fact": "released(mug_01)",
+      "says": "the mug starts resting, not held",
+      "src": "estimated",
+      "from": "stage 1"
+    }
+  ]
+}

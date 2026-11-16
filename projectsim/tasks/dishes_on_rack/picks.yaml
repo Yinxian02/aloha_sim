@@ -1,0 +1,46 @@
+# What the AI step picks for this brief (hand-written until the AI step exists).
+# Extends aloha_sim's BowlOnRack ("put the bowl on the rack") to a plate and a bowl.
+# Plain code adds the rest, with no AI:
+#   python3 <projectsim-task-component>/taskgen/build_task_block.py projectsim/tasks/dishes_on_rack/
+brief: brief.yaml
+
+family: # BowlOnRack generalised: one template for every dish the pools hold
+  name: dishes_on_rack
+  template: "put the {dish} on the {rack}"
+  slots: { dish: bowl, rack: rack }
+  count: null
+  from: "brief.task_families[0]"
+
+wording: # same task in other words, for policies that read an instruction (axis instruction_wording)
+  vague: "tidy the dishes away"
+  specific: "pick up the plate and the bowl from the table and set each one in the dish rack so it rests on the rack"
+
+roles:
+  robot: { type: actor, ref: brief.robot, src: supplied }
+  plate: { type: target, name: "the plate", select: { category: plate }, ref: brief.assets.plate_01, amount: one, src: supplied, from: q1 }
+  bowl: { type: target, name: "the bowl", select: { category: bowl }, ref: brief.assets.bowl_01, amount: one, src: supplied, from: q1 }
+  rack: { type: destination, name: "the rack", select: { category: dish rack }, ref: brief.assets.dish_rack_01, amount: one, src: supplied, from: q1 }
+  table: { type: source, name: "the table", ref: brief.environment.items.table, src: retrieved }
+
+steps:
+  - { use: put_on, args: { target: plate, source: table, destination: rack }, from: q1 }
+  - { use: put_on, args: { target: bowl, source: table, destination: rack }, from: q1 }
+
+from_words:
+  final: []
+  constraints: []
+
+axes:
+  - { axis: object_instance, of: plate, src: estimated } # pools/plates.json, 1 held back
+  - { axis: object_instance, of: bowl, src: estimated }  # pools/bowls.json, 1 held back
+  - { axis: mass, of: plate, src: supplied }   # DM call 11 Sep: mass distribution, centre of mass
+  - { axis: mass, of: bowl, src: supplied }
+  - { axis: friction, of: plate, src: supplied } # DM call 3 Nov
+  - { axis: friction, of: bowl, src: supplied }
+  - { axis: object_pose, of: plate, src: retrieved } # dish_on_rack.py uniform distributions
+  - { axis: object_pose, of: bowl, src: retrieved }
+  - { axis: lighting, src: estimated }
+
+vague: []
+
+unmatched: []

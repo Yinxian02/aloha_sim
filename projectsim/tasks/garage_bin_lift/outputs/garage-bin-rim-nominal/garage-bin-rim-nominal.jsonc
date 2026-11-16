@@ -1,0 +1,202 @@
+// Nominal scenario of brief briefs/garage_bin_rim.yaml: every varied field at its nominal value.
+// Built by run_episode.py on 2026-11-10; the brief in this folder is the input.
+{
+  "format_version": "1.0",
+  "scenario_id": "garage-bin-rim-nominal",
+  "brief_id": "garage-bin-rim",
+  "task_id": "garage_bin_lift@1",
+  "suite": "garage_scene",
+  "suite_version": "1.0",
+  "split": "test",
+  "generation_mode": "simple",
+  "source": "nominal",
+  "strata": {},
+  "seeds": {
+    "scene": 0,
+    "noise": 0
+  },
+  "task": {
+    "description": "Lift the red plastic bin off the workbench by its rim, at least 10 cm, and hold it for 1 s.",
+    "initial_state": [
+      {
+        "predicate": "on_table",
+        "object": "bin",
+        "tolerance_m": 0.005
+      },
+      {
+        "predicate": "gripper_open",
+        "min_fraction": 0.9
+      }
+    ],
+    "success": {
+      "all": [
+        {
+          "predicate": "height_above_table",
+          "object": "bin",
+          "min_m": 0.1,
+          "hold_s": 1.0
+        }
+      ]
+    },
+    "failure": {
+      "any": [
+        {
+          "predicate": "below_table",
+          "object": "bin",
+          "margin_m": 0.05
+        }
+      ]
+    },
+    "timeout_is_failure": true
+  },
+  "robot": {
+    "embodiment": "generic_arm6",
+    "model_version": "1.0.0",
+    "dynamics_source": "urdf_default",
+    "start_joint_positions_rad": [
+      0.0,
+      0.5,
+      1.1,
+      0.0,
+      1.55,
+      0.0
+    ],
+    "start_gripper": 1.0,
+    "overrides": {
+      "gripper_close_time_s": {
+        "value": 1.0,
+        "nominal": 1.0
+      },
+      "action_latency_ms": {
+        "value": 40,
+        "nominal": 40
+      },
+      "tracking_time_constant_s": {
+        "value": 0.07,
+        "nominal": 0.07
+      },
+      "joint_damping_scale": {
+        "value": 1.0,
+        "nominal": 1.0
+      },
+      "base_calibration_error": {
+        "translation_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "yaw_deg": 0.0
+      }
+    },
+    "mount_pose": [
+      -0.1,
+      0.55,
+      0.479,
+      0,
+      0,
+      0.8192,
+      0.5736
+    ]
+  },
+  "sensors": {
+    "bin_pose_obs": {
+      "type": "object_pose",
+      "object": "bin",
+      "latency_ms": {
+        "value": 20,
+        "nominal": 20
+      },
+      "position_noise_mm": {
+        "value": 2.0,
+        "nominal": 2.0
+      },
+      "rotation_noise_deg": {
+        "value": 1.0,
+        "nominal": 1.0
+      },
+      "dropout_rate": 0.0,
+      "applied_by": "wrapper"
+    },
+    "joint_encoders": {
+      "type": "joint_encoders",
+      "position_noise_rad": {
+        "value": 0.0008,
+        "nominal": 0.0008
+      },
+      "velocity_noise_rad_s": {
+        "value": 0.008,
+        "nominal": 0.008
+      },
+      "latency_ms": {
+        "value": 5,
+        "nominal": 5
+      },
+      "applied_by": "wrapper"
+    }
+  },
+  "objects": [
+    {
+      "id": "bin",
+      "scene_body": "a31_red_plastic_bin_on_the_workbench",
+      "grasp": {
+        "mode": "rim",
+        "side": "+x",
+        "wall_m": 0.007,
+        "finger_depth_m": 0.02
+      },
+      "material": {
+        "class": "plastic",
+        "friction": {
+          "value": 0.6,
+          "nominal": 0.6
+        },
+        "mass_kg": {
+          "value": 0.118,
+          "nominal": 0.118
+        },
+        "restitution": 0.35
+      }
+    }
+  ],
+  "fixtures": {},
+  "environment": {
+    "appearance": "not_randomised",
+    "scene": {
+      "mjcf": "C:/Users/rache/Downloads/Experiments/scenes/deepmind/garage/sim_ready_mjcf/scene.xml",
+      "support": {
+        "body": "a27_mobile_workbench",
+        "surface_z_m": 0.479
+      },
+      "static_bodies": "all_except_objects",
+      "description": "Garage with a mobile workbench, two shelving units and a desk; 39 sim-ready assets."
+    }
+  },
+  "episode": {
+    "max_duration_s": 20,
+    "episodes_per_scenario": 3,
+    "control_hz": 20,
+    "settle_s": 1.0
+  },
+  "engine": {
+    "mujoco": {
+      "timestep_s": 0.002,
+      "integrator": "implicitfast",
+      "nativeccd": false
+    }
+  },
+  "validation": {
+    "status": "unchecked",
+    "rejection_reason": null,
+    "attempts": 0,
+    "checks": {}
+  },
+  "runtime": {
+    "wrapper": "scenariogen 0.1.0",
+    "adapter_mujoco": "scenariogen 0.1.0"
+  },
+  "engine_snapshots": {},
+  "real_pairing": {
+    "real_episode_id": null,
+    "never_train": false
+  }
+}

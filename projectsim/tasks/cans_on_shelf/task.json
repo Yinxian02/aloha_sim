@@ -1,0 +1,46 @@
+{
+  "id": "cans_on_shelf",
+  "instruction": "put the cans on the top shelf",
+  "robot": "ALOHA",
+  "object_ids": ["can_01", "can_02", "cereal_box_01", "shelf_01"],
+  "destination": "shelf_01",
+  "time_limit_s": 120,
+  "order": "any",
+  "task_name": "cans_on_shelf",
+  "instruction_variants": {
+    "vague": "restock the shelf",
+    "specific": "pick up the soup can and the tomato can from the table and stand each one upright on the top shelf without knocking the cereal box"
+  },
+  "success_conditions": [
+    "Both cans are on the top shelf at the same time.",
+    "Both cans are upright.",
+    "The robot has released both cans.",
+    "The cereal box has not been knocked over or moved off the bottom shelf.",
+    "The cans, the cereal box and the shelf are at rest."
+  ],
+  "success": {
+    "when": "end",
+    "conditions": [
+      { "fact": "on(can_01, shelf_01)", "says": "the soup can is on the top shelf", "src": "estimated", "from": "stage 1" },
+      { "fact": "on(can_02, shelf_01)", "says": "the tomato can is on the top shelf", "src": "estimated", "from": "stage 1" },
+      { "fact": "upright(can_01)", "says": "the soup can is upright", "src": "estimated", "from": "stage 1" },
+      { "fact": "upright(can_02)", "says": "the tomato can is upright", "src": "estimated", "from": "stage 1" },
+      { "fact": "released(can_01)", "says": "the soup can is released", "src": "estimated", "from": "stage 1" },
+      { "fact": "released(can_02)", "says": "the tomato can is released", "src": "estimated", "from": "stage 1" },
+      { "fact": "stable(can_01)", "says": "the soup can stays still", "src": "estimated", "from": "stage 1" },
+      { "fact": "stable(can_02)", "says": "the tomato can stays still", "src": "estimated", "from": "stage 1" },
+      { "fact": "stable(shelf_01)", "says": "the shelf stays still", "src": "estimated", "from": "stage 1" }
+    ]
+  },
+  "failure": [
+    "The cereal box is knocked over or displaced.",
+    "A can falls off the shelf or the table."
+  ],
+  "initial_state": [
+    { "fact": "gripper_empty()", "says": "the gripper is empty", "src": "estimated", "from": "stage 1" },
+    { "fact": "released(can_01)", "says": "the soup can starts on the table, not held", "src": "estimated", "from": "stage 1" },
+    { "fact": "released(can_02)", "says": "the tomato can starts on the table, not held", "src": "estimated", "from": "stage 1" },
+    { "fact": "on(cereal_box_01, shelf_01)", "says": "the cereal box starts on the bottom shelf", "src": "estimated", "from": "stage 1" },
+    { "fact": "upright(cereal_box_01)", "says": "the cereal box starts upright", "src": "estimated", "from": "stage 1" }
+  ]
+}

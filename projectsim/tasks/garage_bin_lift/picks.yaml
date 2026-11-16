@@ -1,0 +1,31 @@
+# What the AI step picks for this brief (hand-written until the AI step exists).
+# Plain code adds the rest, with no AI:
+#   python3 <projectsim-task-component>/taskgen/build_task_block.py projectsim/tasks/garage_bin_lift/
+brief: brief.yaml
+
+roles:
+  robot: { type: actor, ref: brief.robot, src: supplied }
+  bin: { type: target, name: "the red bin", select: { category: bin }, ref: brief.assets.red_bin_01, amount: one, src: supplied, from: q1 }
+  bench: { type: source, name: "the workbench", ref: brief.environment.items.workbench_01, src: supplied, from: q1 }
+
+steps:
+  - { use: pick, args: { target: bin, source: bench }, from: q1 }
+  # lift is not a separate step: the run's success rule (from_words.final) is the lifted end state
+
+from_words: # the run's own success and failure rules
+  final:
+    - { fact: "lifted(bin)", from: "brief.acceptance.success[0]" } # height_above_table(bin) >= 0.10 m for 1 s
+  constraints:
+    - { kind: never, fact: "fell_off(bin, bench)", from: "brief.acceptance.failure[0]" } # below_table(bin), margin 0.05 m
+
+axes:
+  - { axis: mass, of: bin, src: retrieved }
+  - { axis: friction, of: bin, src: retrieved }
+  - { axis: latency, src: retrieved }
+  - { axis: sensor_noise, src: retrieved }
+  - { axis: controller_gains, src: retrieved }
+  - { axis: robot_start, src: retrieved }
+
+vague: []
+
+unmatched: []

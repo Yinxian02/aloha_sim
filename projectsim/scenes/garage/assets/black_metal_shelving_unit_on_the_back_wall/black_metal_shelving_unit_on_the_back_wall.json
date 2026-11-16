@@ -1,0 +1,37 @@
+{
+  "physics": {
+    "status": "rigid_body",
+    "material_class": "metal_steel",
+    "density_kg_m3": 76.8195760248949,
+    "static_friction": 0.6,
+    "dynamic_friction": 0.45,
+    "restitution": 0.08,
+    "friction_source": "material_table",
+    "friction_model": "legacy",
+    "friction_convention": "pair_value_on_steel_dry",
+    "friction_combine_mode": "average",
+    "restitution_combine_mode": "max",
+    "restitution_convention": "pair_value_drop_test_on_hard_floor",
+    "colliders": 1,
+    "true_mesh_volume_m3": 0.3133302895631665,
+    "authored_mass_kg": 24.07,
+    "fill_factor": 1.0,
+    "engine": "physx",
+    "center_of_mass_m": [
+      -0.000477,
+      0.000724,
+      0.568949
+    ],
+    "diagonal_inertia_kgm2": [
+      2.1782340903834436,
+      3.229775566862596,
+      4.789451032491355
+    ],
+    "principal_axes_quat_wxyz": [
+      0.500944978231582,
+      -0.5027242476656402,
+      -0.497596513443147,
+      -0.4987185272303409
+    ]
+  }
+}

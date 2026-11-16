@@ -1,0 +1,43 @@
+# brief.yaml v1, drafted by the projectsim task-generation skill. Field reference: docs/brief.md.
+
+id: BR-MUG-INTO-TRASH-BIN
+version: 1
+entry: task
+
+task:
+  sentence: { value: "put a mug into a bin", src: supplied }
+intended_use: { value: evaluation, src: estimated }
+
+robot:
+  model: { value: ALOHA, src: supplied }
+
+assets:
+  mug_01:
+    label: { value: mug, src: supplied }
+    files: { value: ["aloha_sim/assets/ycb/025_mug/google_64k/model.xml"], src: retrieved }
+    category: { value: mug, src: supplied }
+    count: { value: 1, src: estimated }
+  trash_bin_01:
+    label: { value: trash bin, src: supplied }
+    files: { value: [], src: supplied }
+    category: { value: trash bin, src: supplied }
+    count: { value: 1, src: estimated }
+
+acceptance:
+  success:
+    value:
+      - The mug is inside the bin (its bounding box overlaps the bin's interior region).
+      - The robot has released the mug.
+      - The mug and the bin are at rest (not moving).
+    src: estimated
+  failure: { value: [], src: estimated }
+  time_limit_s: { value: 60, src: estimated }
+  obtained_by: { value: drafted, src: estimated }
+
+existing_eval:
+  value: ["aloha_sim/tasks/dining_place_in_container.py: get_reward (OOBB overlap inside container + any_props_moving gate)"]
+  src: retrieved
+
+unknowns:
+  - { field: trash_bin_01, question: "The bin has no repo asset (asset_source: generate); its interior containment region can only be sized once ProjectSim generates it.", from_stage: 1, blocking: false }
+  - { field: robot.model, question: "Reachability and collision were not validated — no scene/robot placement is defined for this task.", from_stage: 1, blocking: false }

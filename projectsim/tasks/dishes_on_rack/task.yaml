@@ -1,0 +1,95 @@
+# brief.yaml v2: the task block stage 2 adds. Generated from /Users/sofialiang/Documents/GitHub/aloha_sim/projectsim/tasks/dishes_on_rack/picks.yaml
+# by taskgen/build_task_block.py (plain code, no AI); edit the picks, not this file.
+task:
+  version: 0
+  brief_id: "BR-DISHES-ON-RACK"
+  drafted_by: {picks: "hand-written (stands in for the AI step)", code: "taskgen/build_task_block.py", lists: "v2"}
+  sentence:  # the customer's words, unedited (the robot model's instruction); q1, q2 ... are its sentences
+    text: "put the plate and the bowl on the rack"
+    src: "estimated"
+    from: "brief.task.sentence"
+    quotes: {q1: "put the plate and the bowl on the rack"}
+    wordings: {default: "put the plate and the bowl on the rack", vague: "tidy the dishes away", specific: "pick up the plate and the bowl from the table and set each one in the dish rack so it rests on the rack"}
+  family:  # AI-lab requests: one template, many variants
+    name: "dishes_on_rack"
+    template: "put the {dish} on the {rack}"
+    slots: {dish: "bowl", rack: "rack"}
+    count: null
+    from: "brief.task_families[0]"
+    variant_rules: [{if: "movable(rack)", then: "free_top(rack) at the start (or ask)"}, {if: "movable(rack)", then: "free_top(rack) at the start (or ask)"}]
+  roles:  # who is who (roles.yaml); ref = brief asset or item
+    robot: {type: "actor", ref: "brief.robot", src: "supplied"}
+    plate: {type: "target", name: "the plate", ref: "brief.assets.plate_01", select: {category: "plate"}, amount: "one", src: "supplied", from: "q1"}
+    bowl: {type: "target", name: "the bowl", ref: "brief.assets.bowl_01", select: {category: "bowl"}, amount: "one", src: "supplied", from: "q1"}
+    rack: {type: "destination", name: "the rack", ref: "brief.assets.dish_rack_01", select: {category: "dish rack"}, amount: "one", src: "supplied", from: "q1"}
+    table: {type: "source", name: "the table", ref: "brief.environment.items.table", src: "retrieved"}
+  verbs:  # the expected steps (verbs.yaml): the method, not a requirement
+    - {verb: "pick", args: {target: "plate", source: "table"}}
+    - {verb: "transport", args: {target: "plate", destination: "rack"}}
+    - {verb: "place_on", args: {target: "plate", destination: "rack"}}
+    - {verb: "withdraw", args: {place: "rack"}}
+    - {verb: "pick", args: {target: "bowl", source: "table"}}
+    - {verb: "transport", args: {target: "bowl", destination: "rack"}}
+    - {verb: "place_on", args: {target: "bowl", destination: "rack"}}
+    - {verb: "withdraw", args: {place: "rack"}}
+  initial_state:  # what the steps need before they start (worked out by code)
+    - {says: "the plate is at the table", fact: "at(plate, table)", src: "estimated", from: "verb.pick"}
+    - {says: "the gripper is empty", fact: "gripper_empty", src: "estimated", from: "verb.pick"}
+    - {says: "the bowl is at the table", fact: "at(bowl, table)", src: "estimated", from: "verb.pick"}
+  final_state:  # what the steps leave behind; success is judged on the lines with an id
+    - {id: "C1", says: "the plate is on the rack", fact: "on(plate, rack)", src: "estimated", from: "verb.place_on"}
+    - {id: "C2", says: "the plate is released", fact: "released(plate)", src: "estimated", from: "verb.place_on"}
+    - {id: "C3", says: "the gripper is clear of the rack", fact: "clear(gripper, rack)", src: "estimated", from: "verb.withdraw", numbers: "A1"}
+    - {id: "C4", says: "the bowl is on the rack", fact: "on(bowl, rack)", src: "estimated", from: "verb.place_on"}
+    - {id: "C5", says: "the bowl is released", fact: "released(bowl)", src: "estimated", from: "verb.place_on"}
+  constraints:  # rules for the whole run: never / always / limit
+    - {id: "C6", kind: "never", says: "the plate was dropped", fact: "dropped(plate)", src: "estimated", from: "verb.pick default"}
+    - {id: "C7", kind: "never", says: "the plate hit anything", fact: "collided(plate, any)", src: "estimated", from: "verb.transport default", numbers: "A2"}
+    - {id: "C8", kind: "never", says: "the plate fell off the rack", fact: "fell_off(plate, rack)", src: "estimated", from: "verb.place_on default"}
+    - {id: "C9", kind: "never", says: "the bowl was dropped", fact: "dropped(bowl)", src: "estimated", from: "verb.pick default"}
+    - {id: "C10", kind: "never", says: "the bowl hit anything", fact: "collided(bowl, any)", src: "estimated", from: "verb.transport default", numbers: "A2"}
+    - {id: "C11", kind: "never", says: "the bowl fell off the rack", fact: "fell_off(bowl, rack)", src: "estimated", from: "verb.place_on default"}
+    - {id: "C12", kind: "limit", says: "the task is done within 120 s", fact: "within(task, 120 s)", src: "estimated", from: "brief.acceptance.time_limit_s"}
+  success:  # how one run passes: the end checks hold for hold_s at the end, and no rule check fails
+    says: "a run passes when every end check holds for 1 s at the end and no rule check fails during the run"
+    end_checks: ["C1", "C2", "C3", "C4", "C5"]
+    rule_checks: ["C6", "C7", "C8", "C9", "C10", "C11", "C12"]
+    hold_s: 1
+    src: "estimated"
+    from: "default: held 1 s"
+  assumptions:  # properties the steps rely on; checked in later stages
+    - {fact: "graspable(plate)", check_in: "stage 4 (asset grasp regions)", from: "verb.pick"}
+    - {fact: "reachable(plate)", check_in: "stage 3 / 5 (inverse kinematics)", from: "verb.pick"}
+    - {fact: "free_top(plate)", check_in: "stage 5 (nothing is placed on the target at the start unless the task says so)", from: "verb.pick"}
+    - {fact: "has_room(rack)", check_in: "stage 5 (placement finds free space)", from: "verb.place_on"}
+    - {fact: "graspable(bowl)", check_in: "stage 4 (asset grasp regions)", from: "verb.pick"}
+    - {fact: "reachable(bowl)", check_in: "stage 3 / 5 (inverse kinematics)", from: "verb.pick"}
+    - {fact: "free_top(bowl)", check_in: "stage 5 (nothing is placed on the target at the start unless the task says so)", from: "verb.pick"}
+  variability:  # what varies between runs (axes.yaml): names only, stage 3 sets ranges
+    - {axis: "object_instance", of: "plate", says: "which variant of the object is used", normal: "plates from projectsim/pools/plates.json, bowls from projectsim/pools/bowls.json; 1 of each held back as never-seen", src: "estimated"}
+    - {axis: "object_instance", of: "bowl", says: "which variant of the object is used", normal: "plates from projectsim/pools/plates.json, bowls from projectsim/pools/bowls.json; 1 of each held back as never-seen", src: "estimated"}
+    - {axis: "mass", of: "plate", says: "object weight", normal: "per-material mass and centre of mass (ceramic vs melamine vs steel), not the repo's shared 200 kg/m3 density", src: "supplied"}
+    - {axis: "mass", of: "bowl", says: "object weight", normal: "per-material mass and centre of mass (ceramic vs melamine vs steel), not the repo's shared 200 kg/m3 density", src: "supplied"}
+    - {axis: "friction", of: "plate", says: "how slippery surfaces are", normal: "physically plausible per-material friction, not the repo's shared 1.0", src: "supplied"}
+    - {axis: "friction", of: "bowl", says: "how slippery surfaces are", normal: "physically plausible per-material friction, not the repo's shared 1.0", src: "supplied"}
+    - {axis: "object_pose", of: "plate", says: "where and how the object starts", normal: "dishes x 0 to 0.25 m, y -0.2 to 0 m; rack x -0.1 to 0.1 m, y 0.18 to 0.25 m, yaw -90 deg +/- 3.6 deg", src: "retrieved"}
+    - {axis: "object_pose", of: "bowl", says: "where and how the object starts", normal: "dishes x 0 to 0.25 m, y -0.2 to 0 m; rack x -0.1 to 0.1 m, y 0.18 to 0.25 m, yaw -90 deg +/- 3.6 deg", src: "retrieved"}
+    - {axis: "lighting", says: "light level and direction", normal: "kitchen lighting variation", src: "estimated"}
+    - {axis: "instruction_wording", says: "how the instruction to the robot is worded", src: "estimated", from: "picks.wording", levels: ["default", "vague", "specific"]}
+  exclusions: []  # not simulated in this version
+  ambiguities:  # open questions, each routed to who answers it
+    - {id: "A1", term: "clear", why: "needs numbers: clearance (mm)", goes_to: "stage_3", defaults_seen: ["RoboCasa gripper_obj_far: more than 0.25 m from the object"], status: "open"}
+    - {id: "A2", term: "collided", why: "needs numbers: min_force (N)", goes_to: "stage_3", status: "open"}
+    - {id: "A3", term: "variant count", why: "how many episodes or variants, and how to split them across objects and containers (count and strata)", goes_to: "stage_3", status: "open"}
+    - {id: "A4", term: "Is 'put the plate and the bowl on the rack' how your team would phrase it, or should each dish stay its own task like BowlOnRack?", why: "listed as unknown in the brief (brief.unknowns[0])", goes_to: "stage_1", links: "brief.task.sentence", status: "open"}
+    - {id: "A5", term: "The plate and bowl variants (ceramic dinner plate, melamine side plate, ceramic cereal bowl, steel bowl) are proposed. Swap in the dishes your real-robot evals use, if any.", why: "listed as unknown in the brief (brief.unknowns[1])", goes_to: "stage_1", links: "brief.assets", status: "open"}
+    - {id: "A6", term: "BowlOnRack only checks contact and height. Should a plate also have to stand in a slot (upright), as in a real drainer?", why: "listed as unknown in the brief (brief.unknowns[2])", goes_to: "stage_1", links: "brief.acceptance.success", status: "open"}
+    - {id: "A7", term: "What will the sim results decide: model comparison, regression gating, or predicting real-robot success?", why: "listed as unknown in the brief (brief.unknowns[3])", goes_to: "stage_1", links: "brief.goal.decision", status: "open"}
+  check:  # automatic checks on this block
+    passed: true
+    valid: true
+    coverage: {customer_words: 1, covered: 1, unmatched_items: 0}
+    errors: []
+    warnings: []
+    compare_with: ["brief.acceptance.success", "brief.existing_eval"]
+  approved_by: {role: "customer domain expert", name: null, at: null}  # filled when the customer's expert signs off

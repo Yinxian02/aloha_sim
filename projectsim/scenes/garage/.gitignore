@@ -1,0 +1,4 @@
+# Large generated geometry and textures stay local; scene.xml and physics json are tracked.
+*.obj
+*.mtl
+*.png

@@ -1,0 +1,27 @@
+{
+  "id": "garage_bin_lift",
+  "instruction": "Lift the red plastic bin off the workbench by its rim, at least 10 cm, and hold it for 1 s.",
+  "robot": "generic 6-DOF arm with parallel-jaw gripper (generic_arm6)",
+  "object_ids": ["red_bin_01", "workbench_01", "blue_bin_01", "clear_bin_01", "crate_01", "soccer_ball_01", "glove_01", "cable_01"],
+  "time_limit_s": 20,
+  "order": "any",
+  "task_name": "garage_bin_lift",
+  "success_conditions": [
+    "The red bin is at least 10 cm above the bench top and stays there for 1 s.",
+    "The bin was grasped by one wall of its rim."
+  ],
+  "success": {
+    "when": "end",
+    "conditions": [
+      { "fact": "lifted(red_bin_01)", "says": "the red bin is at least 10 cm above the bench top for 1 s", "src": "retrieved", "from": "outputs/garage-bin-rim-nominal/garage_bin_rim.yaml task.success (height_above_table min_m 0.10, hold_s 1.0)" }
+    ]
+  },
+  "failure": [
+    "The red bin is knocked off the bench (more than 5 cm below the bench top).",
+    "The episode times out."
+  ],
+  "initial_state": [
+    { "fact": "on(red_bin_01, workbench_01)", "says": "the red bin starts on the bench top", "src": "retrieved", "from": "garage_bin_rim.yaml task.initial_state on_table (tolerance 5 mm)" },
+    { "fact": "gripper_empty()", "says": "the gripper starts open and empty", "src": "retrieved", "from": "garage_bin_rim.yaml task.initial_state gripper_open (min fraction 0.9)" }
+  ]
+}

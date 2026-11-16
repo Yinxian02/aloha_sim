@@ -1,0 +1,70 @@
+# Brief for an external scene: the DeepMind garage workbench (sim-ready MJCF). The robot is mounted on the free part
+# of the bench top and lifts the red plastic bin by one wall of its rim. The scene file is the base world; every
+# scene body that is not a task object is welded in place. Hand-written references: examples/garage/.
+#
+#   uv run python generate_scenarios.py briefs/garage_bin_rim.yaml --n 3 --planner rule
+
+brief_id: garage-bin-rim
+suite: garage_scene
+suite_version: "1.0"
+split: test
+generation_mode: simple
+seed: 3000
+max_attempts: 3
+
+task:
+  id: garage_bin_lift@1
+  description: Lift the red plastic bin off the workbench by its rim, at least 10 cm, and hold it for 1 s.
+  initial_state:
+    - { predicate: on_table, object: bin, tolerance_m: 0.005 }
+    - { predicate: gripper_open, min_fraction: 0.9 }
+  success:
+    all:
+      - { predicate: height_above_table, object: bin, min_m: 0.10, hold_s: 1.0 }
+  failure:
+    any:
+      - { predicate: below_table, object: bin, margin_m: 0.05 }     # knocked off the bench
+  timeout_is_failure: true
+
+robot:
+  embodiment: generic_arm6
+  model_version: "1.0.0"
+  dynamics_source: urdf_default
+  # Base on the bench top (surface z = 0.479 m in the scene frame), 0.47 m from the bin's grasped wall, turned
+  # 110 deg so the arm's forward direction points at the bins.
+  mount_pose: [-0.10, 0.55, 0.479, 0, 0, 0.8192, 0.5736]
+  start_joint_positions_rad: [0.0, 0.5, 1.1, 0.0, 1.55, 0.0]
+  start_gripper: 1.0
+  nominal: { gripper_close_time_s: 1.0, action_latency_ms: 40, tracking_time_constant_s: 0.07, joint_damping_scale: 1.0 }
+
+observations:
+  bin_pose_obs: { type: object_pose, object: bin, latency_ms: 20, position_noise_mm: 2.0, rotation_noise_deg: 1.0, dropout_rate: 0.0 }
+  joint_encoders: { type: joint_encoders, position_noise_rad: 0.0008, velocity_noise_rad_s: 0.008, latency_ms: 5 }
+
+scene:
+  external:
+    mjcf: C:/Users/rache/Downloads/Experiments/scenes/deepmind/garage/sim_ready_mjcf/scene.xml
+    support: { body: a27_mobile_workbench, surface_z_m: 0.479 }   # heights are measured from the bench top
+    static_bodies: all_except_objects
+    description: Garage with a mobile workbench, two shelving units and a desk; 39 sim-ready assets.
+  objects:
+    - id: bin
+      scene_body: a31_red_plastic_bin_on_the_workbench        # existing body of the scene; its scene pose is kept
+      grasp: { mode: rim, side: "+x", wall_m: 0.007, finger_depth_m: 0.02 }   # straddle the 7 mm wall, TCP 2 cm below the rim
+      material: { class: plastic, friction: 0.6, mass_kg: 0.118 }
+
+episode: { max_duration_s: 20, episodes_per_scenario: 3, control_hz: 20, settle_s: 1.0 }
+engine: { mujoco: { timestep_s: 0.002, integrator: implicitfast, nativeccd: false } }
+
+checks: { object: bin, lift_height_m: 0.15 }
+
+axes:
+  - { name: gripper_close_time_s, path: robot.overrides.gripper_close_time_s, range: [0.5, 2.0], round: 3,
+      strata: gripper_dynamics, bins: { fast: [0.5, 0.9], nominal: [0.9, 1.5], slow: [1.5, 2.0] } }
+  - { name: action_latency_ms, path: robot.overrides.action_latency_ms, range: [0, 120], round: 1 }
+  - { name: bin_mass_kg, path: "objects[bin].material.mass_kg", range: [0.08, 0.40], round: 4,
+      strata: bin_mass, bins: { empty: [0.08, 0.2], loaded: [0.2, 0.4] } }
+  - { name: bin_friction, path: "objects[bin].material.friction", range: [0.4, 0.9], round: 3 }
+  - { name: bin_pose_latency_ms, path: sensors.bin_pose_obs.latency_ms, range: [0, 80], round: 1 }
+  - { name: bin_position_noise_mm, path: sensors.bin_pose_obs.position_noise_mm, range: [0, 6], round: 2 }
+  - { kind: base_calibration, name: base_calibration, translation_mm_max: 3.0, yaw_deg_max: 0.5 }

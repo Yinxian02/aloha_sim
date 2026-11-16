@@ -1,0 +1,23 @@
+{
+  "description": "One photo of a garage in; a sim-ready MuJoCo scene with per-asset physics and a scored run out.",
+  "inputs": [
+    { "type": "image", "path": "projectsim/tasks/garage_bin_lift/inputs/garage_reference.webp", "says": "Reference photo of the garage" },
+    { "type": "brief", "path": "projectsim/tasks/garage_bin_lift/outputs/garage-bin-rim-nominal/garage_bin_rim.yaml", "says": "Run brief: task, robot mount, sensors, variation axes" }
+  ],
+  "scene": {
+    "path": "projectsim/scenes/garage/scene.xml",
+    "says": "Garage with a mobile workbench, two shelving units and a desk",
+    "assets": 39,
+    "engine": "MuJoCo (MJCF); USD also generated"
+  },
+  "runs": [
+    {
+      "id": "garage-bin-rim-nominal",
+      "says": "Nominal scenario: every varied field at its nominal value",
+      "report_url": "https://claude.ai/artifact/YUFSPWi3BeQgdZ6FGgwpL5?sk=K-V9GOqtd3eRmrfAZVNP5A",
+      "summary": "projectsim/tasks/garage_bin_lift/outputs/garage-bin-rim-nominal/summary.json",
+      "scenario": "projectsim/tasks/garage_bin_lift/outputs/garage-bin-rim-nominal/garage-bin-rim-nominal.jsonc",
+      "video": "projectsim/tasks/garage_bin_lift/outputs/garage-bin-rim-nominal/episode_000.mp4"
+    }
+  ]
+}
